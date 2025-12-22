@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
+import { usePathname, useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
@@ -8,6 +9,9 @@ import Link from "next/link"
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const router = useRouter()
+  const isHomePage = pathname === "/"
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,10 +21,30 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Handle hash navigation when landing on home page
+  useEffect(() => {
+    if (isHomePage && window.location.hash) {
+      const hash = window.location.hash.substring(1)
+      setTimeout(() => {
+        const element = document.getElementById(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" })
+        }
+      }, 100)
+    }
+  }, [isHomePage])
+
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+    if (isHomePage) {
+      // If on home page, scroll to section
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+        setIsMobileMenuOpen(false)
+      }
+    } else {
+      // If on different page, navigate to home with hash
+      router.push(`/#${id}`)
       setIsMobileMenuOpen(false)
     }
   }
@@ -35,9 +59,9 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <Link href="/" className="text-xl font-bold bg-gradient-to-r from-palette-teal to-palette-blue bg-clip-text text-transparent hover:opacity-80 transition-opacity">
             GP
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6">
@@ -45,31 +69,25 @@ export function Navbar() {
               onClick={() => scrollToSection("projects")}
               className="text-sm hover:text-primary transition-colors"
             >
-              Projects
+              Proyectos
             </button>
             <button
               onClick={() => scrollToSection("skills")}
               className="text-sm hover:text-primary transition-colors"
             >
-              Skills
+              Habilidades
             </button>
             <button
               onClick={() => scrollToSection("about")}
               className="text-sm hover:text-primary transition-colors"
             >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="text-sm hover:text-primary transition-colors"
-            >
-              Contact
+              Sobre mí
             </button>
             <Button
               onClick={() => scrollToSection("contact")}
-              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
+              className="bg-gradient-to-r from-palette-teal to-palette-blue hover:from-palette-teal/90 hover:to-palette-blue/90"
             >
-              Get in Touch
+              Contáctame
             </Button>
           </div>
 
@@ -94,31 +112,25 @@ export function Navbar() {
               onClick={() => scrollToSection("projects")}
               className="block w-full text-left text-sm hover:text-primary transition-colors py-2"
             >
-              Projects
+              Proyectos
             </button>
             <button
               onClick={() => scrollToSection("skills")}
               className="block w-full text-left text-sm hover:text-primary transition-colors py-2"
             >
-              Skills
+              Habilidades
             </button>
             <button
               onClick={() => scrollToSection("about")}
               className="block w-full text-left text-sm hover:text-primary transition-colors py-2"
             >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="block w-full text-left text-sm hover:text-primary transition-colors py-2"
-            >
-              Contact
+              Sobre mí
             </button>
             <Button
               onClick={() => scrollToSection("contact")}
               className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
             >
-              Get in Touch
+              Contáctame
             </Button>
           </div>
         )}

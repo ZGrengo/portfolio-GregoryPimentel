@@ -12,14 +12,14 @@ const values = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 scroll-mt-20">
+    <section id="about" className="pt-8 pb-20 scroll-mt-20">
       <div className="container mx-auto px-4">
         <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
           <CardContent className="p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Column 1: About Text */}
               <div>
-                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-palette-teal to-palette-blue bg-clip-text text-transparent">
                   Sobre mí
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -43,13 +43,13 @@ export function AboutSection() {
 
               {/* Column 2: Values */}
               <div>
-                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-palette-teal to-palette-blue bg-clip-text text-transparent">
                   Lo que valoro
                 </h2>
                 <ul className="space-y-4">
                   {values.map((value, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="h-5 w-5 text-palette-blue mt-0.5 flex-shrink-0" />
                       <span className="text-muted-foreground">{value}</span>
                     </li>
                   ))}

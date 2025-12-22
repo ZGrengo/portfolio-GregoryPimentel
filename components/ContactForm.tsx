@@ -35,12 +35,12 @@ export function ContactForm() {
   }
 
   return (
-    <section id="contact" className="py-20 scroll-mt-20">
+    <section id="contact" className="pt-8 pb-20 scroll-mt-20">
       <div className="container mx-auto px-4">
         <Card className="bg-white/5 border-white/10 backdrop-blur-sm max-w-2xl mx-auto">
           <CardHeader>
-            <CardTitle className="text-3xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Get in Touch
+            <CardTitle className="text-3xl bg-gradient-to-r from-palette-teal to-palette-blue bg-clip-text text-transparent">
+              Contáctame
             </CardTitle>
             <CardDescription className="text-base">
               ¿Tienes un proyecto en mente? Me encantaría escucharte.
@@ -50,7 +50,7 @@ export function ContactForm() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName">First Name</Label>
+                  <Label htmlFor="firstName">Nombre</Label>
                   <Input
                     id="firstName"
                     name="firstName"
@@ -61,7 +61,7 @@ export function ContactForm() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="lastName">Last Name</Label>
+                  <Label htmlFor="lastName">Apellido</Label>
                   <Input
                     id="lastName"
                     name="lastName"
@@ -74,7 +74,7 @@ export function ContactForm() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email">Correo Electrónico</Label>
                 <Input
                   id="email"
                   name="email"
@@ -87,7 +87,7 @@ export function ContactForm() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
+                <Label htmlFor="message">Mensaje</Label>
                 <Textarea
                   id="message"
                   name="message"
@@ -101,18 +101,18 @@ export function ContactForm() {
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white"
+                className="w-full bg-gradient-to-r from-palette-teal to-palette-blue hover:from-palette-teal/90 hover:to-palette-blue/90 text-white"
                 disabled={isSubmitted}
               >
                 {isSubmitted ? (
                   <>
                     <Send className="mr-2 h-4 w-4" />
-                    Message Sent!
+                    ¡Mensaje Enviado!
                   </>
                 ) : (
                   <>
                     <Send className="mr-2 h-4 w-4" />
-                    Send Message
+                    Enviar Mensaje
                   </>
                 )}
               </Button>

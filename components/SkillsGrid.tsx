@@ -11,7 +11,7 @@ const categoryLabels = {
 
 export function SkillsGrid() {
   return (
-    <section id="skills" className="py-20 scroll-mt-20">
+    <section id="skills" className="pt-8 pb-20 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="space-y-12">
           {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
@@ -25,14 +25,14 @@ export function SkillsGrid() {
                     key={skill.id}
                     className={`bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 ${
                       skill.isCore
-                        ? "border-2 border-blue-500/50 shadow-lg shadow-blue-500/20"
+                        ? "border-2 border-palette-teal/50 shadow-lg shadow-palette-teal/20"
                         : ""
                     }`}
                   >
                     <CardContent className="p-4 text-center">
                       <div className="text-sm font-medium">{skill.name}</div>
                       {skill.isCore && (
-                        <div className="mt-2 text-xs text-blue-400">Core</div>
+                        <div className="mt-2 text-xs text-palette-blue">Core</div>
                       )}
                     </CardContent>
                   </Card>

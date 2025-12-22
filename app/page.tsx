@@ -12,33 +12,33 @@ export default function Home() {
       <Hero />
       <Highlights />
       
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 pt-20 pb-8">
         <SectionHeading
-          title="Projects"
+          title="Proyectos"
           subtitle="Proyectos que he construido, desde ideas hasta producción"
         />
       </div>
       <ProjectsGrid />
 
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 pt-20 pb-8">
         <SectionHeading
-          title="Skills & Tools"
+          title="Habilidades y Herramientas"
           subtitle="Tecnologías que uso para construir productos digitales"
         />
       </div>
       <SkillsGrid />
 
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 pt-20 pb-8">
         <SectionHeading
-          title="About Me"
+          title="Sobre mí"
           subtitle="Conoce más sobre mi trayectoria y valores"
         />
       </div>
       <AboutSection />
 
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 pt-20 pb-8">
         <SectionHeading
-          title="Contact"
+          title="Contacto"
           subtitle="¿Tienes un proyecto en mente? Me encantaría escucharte"
         />
       </div>
