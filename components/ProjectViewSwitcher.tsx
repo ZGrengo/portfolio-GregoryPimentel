@@ -18,7 +18,7 @@ export function ProjectViewSwitcher({ desktopImage, mobileImage, projectTitle }:
   // If no mobile image, just show desktop view without toggle
   if (!mobileImage) {
     return (
-      <Card className="bg-white/5 border-white/10 backdrop-blur-sm mb-12 overflow-hidden">
+      <Card className="bg-slate-900 dark:bg-slate-900 [.light_&]:bg-[#f1e9db] border-white/10 dark:border-white/10 [.light_&]:border-[#716a5c]/30 mb-12 overflow-hidden">
         <CardContent className="p-0">
           <div className="relative h-64 md:h-96 w-full">
             <Image
@@ -34,10 +34,10 @@ export function ProjectViewSwitcher({ desktopImage, mobileImage, projectTitle }:
   }
 
   return (
-    <Card className="bg-white/5 border-white/10 backdrop-blur-sm mb-12 overflow-hidden">
+    <Card className="bg-slate-900 dark:bg-slate-900 [.light_&]:bg-[#f1e9db] border-white/10 dark:border-white/10 [.light_&]:border-[#716a5c]/30 mb-12 overflow-hidden">
       <CardContent className="p-0">
         {/* Toggle Buttons */}
-        <div className="flex justify-center gap-2 p-4 bg-white/5 border-b border-white/10">
+        <div className="flex justify-center gap-2 p-4 bg-slate-900 dark:bg-slate-900 [.light_&]:bg-[#f1e9db] border-b border-white/10 dark:border-white/10 [.light_&]:border-[#716a5c]/20">
           <Button
             variant={view === "desktop" ? "default" : "outline"}
             size="sm"
@@ -45,7 +45,7 @@ export function ProjectViewSwitcher({ desktopImage, mobileImage, projectTitle }:
             className={
               view === "desktop"
                 ? "bg-gradient-to-r from-palette-teal to-palette-blue hover:from-palette-teal/90 hover:to-palette-blue/90 text-white"
-                : "border-white/20 bg-white/5 hover:bg-white/10"
+                : "border-white/20 dark:border-white/20 [.light_&]:border-[#716a5c]/30 bg-transparent hover:bg-white/5 dark:hover:bg-white/10 [.light_&]:hover:bg-[#f1e9db]/40"
             }
           >
             <Monitor className="mr-2 h-4 w-4" />
@@ -58,7 +58,7 @@ export function ProjectViewSwitcher({ desktopImage, mobileImage, projectTitle }:
             className={
               view === "mobile"
                 ? "bg-gradient-to-r from-palette-teal to-palette-blue hover:from-palette-teal/90 hover:to-palette-blue/90 text-white"
-                : "border-white/20 bg-white/5 hover:bg-white/10"
+                : "border-white/20 dark:border-white/20 [.light_&]:border-[#716a5c]/30 bg-transparent hover:bg-white/5 dark:hover:bg-white/10 [.light_&]:hover:bg-[#f1e9db]/40"
             }
           >
             <Smartphone className="mr-2 h-4 w-4" />

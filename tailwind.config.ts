@@ -52,6 +52,12 @@ const config = {
           dark: "#1f271b",
           teal: "#0b4f6c",
           blue: "#145c9e",
+          // Light mode palette
+          light: {
+            cream: "#f1e9db",
+            sky: "#5db7de",
+            brown: "#716a5c",
+          },
         },
       },
       borderRadius: {

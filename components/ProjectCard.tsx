@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -6,14 +8,29 @@ import { ExternalLink, Code, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { Project } from "@/data/projects"
+import { useTranslations } from "@/hooks/useTranslations"
 
 interface ProjectCardProps {
   project: Project
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const { t } = useTranslations()
+  
+  // Get translated description based on project slug
+  const getTranslatedDescription = () => {
+    const slugToKey: Record<string, keyof typeof t.projects.descriptions> = {
+      goikounter: "goikounter",
+      "portfolio-generator": "portfolioGenerator",
+      "ecommerce-php": "ecommercePhp",
+      "flight-search": "hackaflight",
+    }
+    const key = slugToKey[project.slug]
+    return key ? t.projects.descriptions[key] : project.description
+  }
+
   return (
-    <Card className="group bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-palette-blue/20 overflow-hidden">
+    <Card className="group bg-white/5 dark:bg-white/5 [.light_&]:bg-[#f1e9db]/30 border-white/10 dark:border-white/10 [.light_&]:border-[#716a5c]/20 backdrop-blur-sm hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#f1e9db]/50 hover:border-white/20 dark:hover:border-white/20 [.light_&]:hover:border-[#716a5c]/30 transition-all duration-300 hover:shadow-xl hover:shadow-palette-blue/20 dark:hover:shadow-palette-blue/20 [.light_&]:hover:shadow-[#5db7de]/20 overflow-hidden flex flex-col h-full">
       <div className="relative h-48 overflow-hidden">
         <Image
           src={project.image}
@@ -24,8 +41,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
         {project.featured && (
           <div className="absolute top-4 left-4 z-10">
-            <Badge className="bg-gradient-to-r from-palette-teal to-palette-blue text-white border-0">
-              Destacado
+            <Badge className="bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#5db7de] [.light_&]:to-[#5db7de]/90 text-white border-0">
+              {t.projects.featured}
             </Badge>
           </div>
         )}
@@ -33,12 +50,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       <CardHeader>
         <CardTitle className="text-2xl">{project.title}</CardTitle>
-        <CardDescription className="text-base">
-          {project.description}
+        <CardDescription className="text-base whitespace-pre-line">
+          {getTranslatedDescription()}
         </CardDescription>
       </CardHeader>
 
-      <CardContent>
+      <CardContent className="flex-grow">
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tech.slice(0, 4).map((tech) => (
             <Badge
@@ -57,7 +74,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </CardContent>
 
-      <CardFooter className="flex flex-wrap gap-2">
+      <CardFooter className="flex flex-wrap gap-2 mt-auto">
         {project.liveUrl ? (
           <Button
             variant="outline"
@@ -67,7 +84,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           >
             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="mr-2 h-4 w-4" />
-              Demo en Vivo
+              {t.projects.demo}
             </a>
           </Button>
         ) : null}
@@ -81,18 +98,18 @@ export function ProjectCard({ project }: ProjectCardProps) {
           >
             <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
               <Code className="mr-2 h-4 w-4" />
-              Código
+              {t.projects.code}
             </a>
           </Button>
         ) : null}
 
         <Button
           size="sm"
-          className="bg-gradient-to-r from-palette-teal to-palette-blue hover:from-palette-teal/90 hover:to-palette-blue/90 text-white ml-auto"
+          className="bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#5db7de] [.light_&]:to-[#5db7de]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#5db7de]/90 [.light_&]:hover:to-[#5db7de]/80 text-white ml-auto"
           asChild
         >
           <Link href={`/projects/${project.slug}`}>
-            Ver Proyecto
+            {t.projects.viewProject}
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>

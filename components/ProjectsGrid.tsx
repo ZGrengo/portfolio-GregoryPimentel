@@ -1,8 +1,12 @@
+"use client"
+
 import React from "react"
 import { ProjectCard } from "./ProjectCard"
 import { projects } from "@/data/projects"
+import { useTranslations } from "@/hooks/useTranslations"
 
 export function ProjectsGrid() {
+  const { t } = useTranslations()
   const featuredProject = projects.find(p => p.featured)
   const otherProjects = projects.filter(p => !p.featured)
 
@@ -14,7 +18,7 @@ export function ProjectsGrid() {
           {featuredProject && (
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-center md:text-left">
-                Proyecto Destacado
+                {t.projects.featuredProject || "Proyecto Destacado"}
               </h3>
               <div className="max-w-4xl mx-auto">
                 <ProjectCard project={featuredProject} />
@@ -25,7 +29,7 @@ export function ProjectsGrid() {
           {/* Other Projects */}
           <div>
             <h3 className="text-2xl font-semibold mb-6 text-center md:text-left">
-              Otros Proyectos
+              {t.projects.otherProjects || "Otros Proyectos"}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {otherProjects.map((project) => (

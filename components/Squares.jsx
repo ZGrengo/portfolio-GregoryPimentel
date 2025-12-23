@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 
 const Squares = ({
   direction = 'right',
@@ -9,6 +10,7 @@ const Squares = ({
   squareSize = 40,
   hoverFillColor = '#222'
 }) => {
+  const { theme } = useTheme();
   const canvasRef = useRef(null);
   const requestRef = useRef(null);
   const numSquaresX = useRef(0);
@@ -66,8 +68,18 @@ const Squares = ({
         canvas.height / 2,
         Math.sqrt(canvas.width ** 2 + canvas.height ** 2) / 2
       );
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0)');
-      gradient.addColorStop(1, '#1f271b');
+      
+      // Adjust gradient based on theme
+      if (theme === 'light') {
+        // Lighter gradient for light mode - less opacity and lighter color
+        gradient.addColorStop(0, 'rgba(0, 0, 0, 0)');
+        gradient.addColorStop(0.7, 'rgba(241, 233, 219, 0.3)'); // palette-light-cream with low opacity
+        gradient.addColorStop(1, 'rgba(241, 233, 219, 0.6)'); // palette-light-cream with medium opacity
+      } else {
+        // Dark mode - original gradient
+        gradient.addColorStop(0, 'rgba(0, 0, 0, 0)');
+        gradient.addColorStop(1, '#1f271b');
+      }
 
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -99,6 +111,11 @@ const Squares = ({
       drawGrid();
       requestRef.current = requestAnimationFrame(updateAnimation);
     };
+    
+    // Redraw when theme changes
+    if (requestRef.current) {
+      drawGrid();
+    }
 
     const handleMouseMove = event => {
       const rect = canvas.getBoundingClientRect();
@@ -134,7 +151,7 @@ const Squares = ({
       canvas.removeEventListener('mousemove', handleMouseMove);
       canvas.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [direction, speed, borderColor, hoverFillColor, squareSize]);
+  }, [direction, speed, borderColor, hoverFillColor, squareSize, theme]);
 
   return <canvas ref={canvasRef} className="w-full h-full border-none block"></canvas>;
 };

@@ -33,7 +33,7 @@ export function BentoGrid({ images, onSelect, isMobileView = false }: BentoGridP
         {/* Hero image in phone frame - standardized size */}
         <div
           onClick={() => onSelect(heroIndex)}
-          className="group relative cursor-pointer overflow-hidden rounded-lg bg-slate-900/60 border border-white/20 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-palette-blue/20"
+          className="group relative cursor-pointer overflow-hidden rounded-lg bg-slate-900 dark:bg-slate-900 [.light_&]:bg-[#f1e9db] border border-white/20 dark:border-white/20 [.light_&]:border-[#716a5c]/30 transition-all duration-300 hover:border-white/30 dark:hover:border-white/30 [.light_&]:hover:border-[#716a5c]/40 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-palette-blue/20 dark:hover:shadow-palette-blue/20 [.light_&]:hover:shadow-[#5db7de]/20"
         >
           <div className="flex justify-center p-4">
             <div className="w-full max-w-[280px]">
@@ -51,7 +51,7 @@ export function BentoGrid({ images, onSelect, isMobileView = false }: BentoGridP
                 <div
                   key={idx}
                   onClick={() => onSelect(actualIndex)}
-                  className="group relative cursor-pointer overflow-hidden rounded-lg bg-slate-900/60 border border-white/20 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-palette-blue/20"
+                  className="group relative cursor-pointer overflow-hidden rounded-lg bg-slate-900 dark:bg-slate-900 [.light_&]:bg-[#f1e9db] border border-white/20 dark:border-white/20 [.light_&]:border-[#716a5c]/30 transition-all duration-300 hover:border-white/30 dark:hover:border-white/30 [.light_&]:hover:border-[#716a5c]/40 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-palette-blue/20 dark:hover:shadow-palette-blue/20 [.light_&]:hover:shadow-[#5db7de]/20"
                 >
                   <div className="flex justify-center p-3">
                     <div className="w-full max-w-[200px]">
@@ -73,7 +73,7 @@ export function BentoGrid({ images, onSelect, isMobileView = false }: BentoGridP
       {/* Hero image - takes 2 columns and 2 rows, standardized height */}
       <div
         onClick={() => onSelect(heroIndex)}
-        className="group relative cursor-pointer overflow-hidden rounded-lg bg-slate-900/60 border border-white/20 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-palette-blue/20 md:col-span-2 md:row-span-2"
+        className="group relative cursor-pointer overflow-hidden rounded-lg bg-slate-900 dark:bg-slate-900 [.light_&]:bg-[#f1e9db] border border-white/20 dark:border-white/20 [.light_&]:border-[#716a5c]/30 transition-all duration-300 hover:border-white/30 dark:hover:border-white/30 [.light_&]:hover:border-[#716a5c]/40 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-palette-blue/20 dark:hover:shadow-palette-blue/20 [.light_&]:hover:shadow-[#5db7de]/20 md:col-span-2 md:row-span-2"
       >
         <div className="relative h-[500px] w-full">
           <Image
@@ -94,7 +94,7 @@ export function BentoGrid({ images, onSelect, isMobileView = false }: BentoGridP
           <div
             key={idx}
             onClick={() => onSelect(actualIndex)}
-            className="group relative cursor-pointer overflow-hidden rounded-lg bg-slate-900/60 border border-white/20 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-palette-blue/20"
+            className="group relative cursor-pointer overflow-hidden rounded-lg bg-slate-900 dark:bg-slate-900 [.light_&]:bg-[#f1e9db] border border-white/20 dark:border-white/20 [.light_&]:border-[#716a5c]/30 transition-all duration-300 hover:border-white/30 dark:hover:border-white/30 [.light_&]:hover:border-[#716a5c]/40 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-palette-blue/20 dark:hover:shadow-palette-blue/20 [.light_&]:hover:shadow-[#5db7de]/20"
           >
             <div className="relative h-[240px] w-full">
               <Image

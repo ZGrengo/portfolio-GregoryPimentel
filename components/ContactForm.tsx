@@ -1,14 +1,16 @@
 "use client"
 
 import React, { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Mail, Linkedin, Github, Send } from "lucide-react"
+import { useTranslations } from "@/hooks/useTranslations"
 
 export function ContactForm() {
+  const { t } = useTranslations()
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -37,20 +39,14 @@ export function ContactForm() {
   return (
     <section id="contact" className="pt-8 pb-20 scroll-mt-20">
       <div className="container mx-auto px-4">
-        <Card className="bg-white/5 border-white/10 backdrop-blur-sm max-w-2xl mx-auto">
+        <Card className="bg-white/5 dark:bg-white/5 [.light_&]:bg-[#f1e9db]/30 border-white/10 dark:border-white/10 [.light_&]:border-[#716a5c]/20 backdrop-blur-sm max-w-2xl mx-auto">
           <CardHeader>
-            <CardTitle className="text-3xl bg-gradient-to-r from-palette-teal to-palette-blue bg-clip-text text-transparent">
-              Contáctame
-            </CardTitle>
-            <CardDescription className="text-base">
-              ¿Tienes un proyecto en mente? Me encantaría escucharte.
-            </CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName">Nombre</Label>
+                  <Label htmlFor="firstName">{t.contact.firstName}</Label>
                   <Input
                     id="firstName"
                     name="firstName"
@@ -61,7 +57,7 @@ export function ContactForm() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="lastName">Apellido</Label>
+                  <Label htmlFor="lastName">{t.contact.lastName}</Label>
                   <Input
                     id="lastName"
                     name="lastName"
@@ -74,7 +70,7 @@ export function ContactForm() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email">Correo Electrónico</Label>
+                <Label htmlFor="email">{t.contact.email}</Label>
                 <Input
                   id="email"
                   name="email"
@@ -87,7 +83,7 @@ export function ContactForm() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message">Mensaje</Label>
+                <Label htmlFor="message">{t.contact.message}</Label>
                 <Textarea
                   id="message"
                   name="message"
@@ -101,25 +97,25 @@ export function ContactForm() {
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-palette-teal to-palette-blue hover:from-palette-teal/90 hover:to-palette-blue/90 text-white"
+                className="w-full bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#5db7de] [.light_&]:to-[#5db7de]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#5db7de]/90 [.light_&]:hover:to-[#5db7de]/80 text-white"
                 disabled={isSubmitted}
               >
                 {isSubmitted ? (
                   <>
                     <Send className="mr-2 h-4 w-4" />
-                    ¡Mensaje Enviado!
+                    {t.contact.sending}
                   </>
                 ) : (
                   <>
                     <Send className="mr-2 h-4 w-4" />
-                    Enviar Mensaje
+                    {t.contact.send}
                   </>
                 )}
               </Button>
 
               {isSubmitted && (
                 <p className="text-sm text-green-400 text-center">
-                  ¡Gracias! Tu mensaje ha sido enviado. Te responderé pronto.
+                  {t.contact.success}
                 </p>
               )}
             </form>
@@ -127,7 +123,7 @@ export function ContactForm() {
             {/* Social Links */}
             <div className="mt-8 pt-8 border-t border-white/10">
               <p className="text-sm text-muted-foreground mb-4 text-center">
-                O contáctame directamente:
+                {t.contact.contactDirectly}
               </p>
               <div className="flex justify-center gap-4">
                 <a

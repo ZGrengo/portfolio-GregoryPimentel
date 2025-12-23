@@ -1,26 +1,30 @@
+"use client"
+
 import React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { TrendingUp, Code, Zap } from "lucide-react"
-
-const highlights = [
-  {
-    icon: TrendingUp,
-    title: "Impacto real en producción",
-    description: "GoikoCounter está desplegado en +10 locales"
-  },
-  {
-    icon: Code,
-    title: "CRUD e integraciones",
-    description: "APIs, pagos, bases de datos"
-  },
-  {
-    icon: Zap,
-    title: "UI limpia y rendimiento",
-    description: "UX, responsive, buenas prácticas"
-  }
-]
+import { useTranslations } from "@/hooks/useTranslations"
 
 export function Highlights() {
+  const { t } = useTranslations()
+
+  const highlights = [
+    {
+      icon: TrendingUp,
+      title: t.highlights.realImpact.title,
+      description: t.highlights.realImpact.description,
+    },
+    {
+      icon: Code,
+      title: t.highlights.crud.title,
+      description: t.highlights.crud.description,
+    },
+    {
+      icon: Zap,
+      title: t.highlights.ui.title,
+      description: t.highlights.ui.description,
+    },
+  ]
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
