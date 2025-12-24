@@ -17,16 +17,42 @@ export function ContactForm() {
     email: "",
     message: ""
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Simulate form submission
-    setIsSubmitted(true)
-    setTimeout(() => {
-      setIsSubmitted(false)
+    setIsSubmitting(true)
+    setError(null)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message')
+      }
+
+      setIsSubmitted(true)
       setFormData({ firstName: "", lastName: "", email: "", message: "" })
-    }, 3000)
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false)
+      }, 5000)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : t.contact.error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -98,12 +124,12 @@ export function ContactForm() {
               <Button
                 type="submit"
                 className="w-full bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#5db7de] [.light_&]:to-[#5db7de]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#5db7de]/90 [.light_&]:hover:to-[#5db7de]/80 text-white"
-                disabled={isSubmitted}
+                disabled={isSubmitting || isSubmitted}
               >
-                {isSubmitted ? (
+                {isSubmitting || isSubmitted ? (
                   <>
                     <Send className="mr-2 h-4 w-4" />
-                    {t.contact.sending}
+                    {isSubmitted ? t.contact.success.split('.')[0] : t.contact.sending}
                   </>
                 ) : (
                   <>
@@ -116,6 +142,12 @@ export function ContactForm() {
               {isSubmitted && (
                 <p className="text-sm text-green-400 text-center">
                   {t.contact.success}
+                </p>
+              )}
+
+              {error && (
+                <p className="text-sm text-red-400 text-center">
+                  {error}
                 </p>
               )}
             </form>

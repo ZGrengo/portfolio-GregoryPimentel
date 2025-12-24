@@ -67,8 +67,9 @@ export const translations = {
       email: "Correo Electrónico",
       message: "Mensaje",
       send: "Enviar Mensaje",
-      sending: "¡Mensaje Enviado!",
+      sending: "Enviando...",
       success: "¡Gracias! Tu mensaje ha sido enviado. Te responderé pronto.",
+      error: "Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.",
       contactDirectly: "O contáctame directamente:",
     },
     // About Section
@@ -304,8 +305,9 @@ export const translations = {
       email: "Email",
       message: "Message",
       send: "Send Message",
-      sending: "Message Sent!",
+      sending: "Sending...",
       success: "Thank you! Your message has been sent. I'll get back to you soon.",
+      error: "There was an error sending your message. Please try again.",
       contactDirectly: "Or contact me directly:",
     },
     // About Section
