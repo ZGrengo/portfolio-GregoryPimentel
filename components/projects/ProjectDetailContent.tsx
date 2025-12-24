@@ -218,7 +218,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
-                  {projectData.features.map((feature, index) => (
+                  {projectData.features.map((feature: string, index: number) => (
                     <li key={index} className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-palette-blue dark:text-palette-blue [.light_&]:text-[#5db7de] mt-0.5 flex-shrink-0" />
                       <span className="text-muted-foreground">{feature}</span>

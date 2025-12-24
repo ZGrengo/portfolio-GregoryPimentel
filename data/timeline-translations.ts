@@ -11,7 +11,7 @@ export function getTimeline(language: "es" | "en"): TimelineItem[] {
       period: t.goikounter.period,
       type: "Work",
       description: t.goikounter.description,
-      highlights: t.goikounter.highlights,
+      highlights: t.goikounter.highlights ? [...t.goikounter.highlights] : undefined,
     },
     {
       title: t.bootcamp.title,
@@ -19,7 +19,7 @@ export function getTimeline(language: "es" | "en"): TimelineItem[] {
       period: t.bootcamp.period,
       type: "Education",
       description: t.bootcamp.description,
-      highlights: t.bootcamp.highlights,
+      highlights: t.bootcamp.highlights ? [...t.bootcamp.highlights] : undefined,
     },
     {
       title: t.practicas.title,
@@ -27,7 +27,7 @@ export function getTimeline(language: "es" | "en"): TimelineItem[] {
       period: t.practicas.period,
       type: "Work",
       description: t.practicas.description,
-      highlights: t.practicas.highlights,
+      highlights: t.practicas.highlights ? [...t.practicas.highlights] : undefined,
     },
     {
       title: t.frontend.title,
@@ -35,7 +35,7 @@ export function getTimeline(language: "es" | "en"): TimelineItem[] {
       period: t.frontend.period,
       type: "Work",
       description: t.frontend.description,
-      highlights: t.frontend.highlights,
+      highlights: t.frontend.highlights ? [...t.frontend.highlights] : undefined,
     },
     {
       title: t.ingenieria.title,

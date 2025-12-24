@@ -42,6 +42,7 @@ export function Hero() {
           pageLoadAnimation={true}
           brightness={theme === "light" ? 0.8 : 0.4}
           className="w-full h-full"
+          style={undefined}
         />
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-palette-dark/80 via-slate-900/60 to-palette-dark/80 dark:from-palette-dark/80 dark:via-slate-900/60 dark:to-palette-dark/80 [.light_&]:from-[#f1e9db]/90 [.light_&]:via-[#f1e9db]/70 [.light_&]:to-[#f1e9db]/90"></div>
@@ -139,6 +140,8 @@ export function Hero() {
               }}
               innerGradient="linear-gradient(145deg, rgba(11, 79, 108, 0.55) 0%, rgba(20, 92, 158, 0.27) 100%)"
               behindGlowColor="rgba(20, 92, 158, 0.67)"
+              behindGlowSize={undefined}
+              miniAvatarUrl={undefined}
             />
           </div>
         </div>

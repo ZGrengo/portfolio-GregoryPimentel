@@ -239,7 +239,7 @@ export default function FaultyTerminal({
   pageLoadAnimation = true,
   brightness = 1,
   className,
-  style,
+  style = undefined,
   ...rest
 }) {
   const containerRef = useRef(null);
