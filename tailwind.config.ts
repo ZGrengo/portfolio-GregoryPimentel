@@ -54,9 +54,9 @@ const config = {
           blue: "#145c9e",
           // Light mode palette
           light: {
-            cream: "#f1e9db",
-            sky: "#5db7de",
-            brown: "#716a5c",
+            cream: "#f7f9f9",
+            sky: "#00a676",
+            brown: "#0a2e36",
           },
         },
       },

@@ -34,12 +34,12 @@ export function Highlights() {
             return (
               <Card
                 key={index}
-                className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-lg hover:shadow-palette-blue/20"
+                className="bg-white/5 dark:bg-white/5 border-white/10 dark:border-white/10 [.light_&]:border-[#0a2e36]/20 backdrop-blur-sm hover:bg-white/10 dark:hover:bg-white/10 hover:border-white/20 dark:hover:border-white/20 [.light_&]:hover:border-[#00a676]/50 transition-all duration-300 hover:shadow-lg hover:shadow-palette-blue/20 dark:hover:shadow-palette-blue/20 [.light_&]:hover:shadow-[#00a676]/20"
               >
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-gradient-to-br from-palette-teal/20 to-palette-blue/20 border border-palette-teal/30">
-                      <Icon className="h-6 w-6 text-palette-blue" />
+                    <div className="p-3 rounded-lg bg-gradient-to-br from-palette-teal/20 to-palette-blue/20 dark:from-palette-teal/20 dark:to-palette-blue/20 [.light_&]:from-[#00a676]/20 [.light_&]:to-[#00a676]/20 border border-palette-teal/30 dark:border-palette-teal/30 [.light_&]:border-[#00a676]/50">
+                      <Icon className="h-6 w-6 text-palette-blue dark:text-palette-blue [.light_&]:text-[#00a676]" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">

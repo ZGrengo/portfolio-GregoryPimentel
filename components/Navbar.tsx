@@ -82,23 +82,23 @@ export function Navbar() {
       <button
         type="button"
         onClick={toggleTheme}
-        className="rounded-full border border-white/10 dark:border-white/10 [.light_&]:border-[#716a5c]/30 bg-background/60 dark:bg-background/60 [.light_&]:bg-[#f1e9db]/80 backdrop-blur-md p-2 flex items-center justify-center hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#716a5c]/20 transition-colors"
+        className="rounded-full border border-white/10 dark:border-white/10 [.light_&]:border-[#0a2e36]/30 bg-background/60 dark:bg-background/60 [.light_&]:bg-[#f7f9f9]/80 backdrop-blur-md p-2 flex items-center justify-center hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#0a2e36]/20 transition-colors"
         aria-label="Cambiar tema"
       >
         {mounted &&
           (theme === "light" ? (
             <Sun className="h-4 w-4 text-yellow-400" />
           ) : (
-            <Moon className="h-4 w-4 text-slate-200 dark:text-slate-200 [.light_&]:text-[#716a5c]" />
+            <Moon className="h-4 w-4 text-slate-200 dark:text-slate-200 [.light_&]:text-[#0a2e36]" />
           ))}
       </button>
-      <div className="inline-flex items-center rounded-full border border-white/10 dark:border-white/10 [.light_&]:border-[#716a5c]/30 bg-background/60 dark:bg-background/60 [.light_&]:bg-[#f1e9db]/80 backdrop-blur-md text-xs font-medium overflow-hidden">
+      <div className="inline-flex items-center rounded-full border border-white/10 dark:border-white/10 [.light_&]:border-[#0a2e36]/30 bg-background/60 dark:bg-background/60 [.light_&]:bg-[#f7f9f9]/80 backdrop-blur-md text-xs font-medium overflow-hidden">
         <button
           type="button"
           onClick={() => setLanguage("es")}
           className={`px-3 py-1 transition-colors ${
             language === "es" 
-              ? "bg-white/10 dark:bg-white/10 [.light_&]:bg-[#5db7de]/30 text-white dark:text-white [.light_&]:text-[#716a5c]" 
+              ? "bg-white/10 dark:bg-white/10 [.light_&]:bg-[#00a676]/30 text-white dark:text-white [.light_&]:text-[#0a2e36]" 
               : "text-muted-foreground"
           }`}
         >
@@ -109,7 +109,7 @@ export function Navbar() {
           onClick={() => setLanguage("en")}
           className={`px-3 py-1 transition-colors ${
             language === "en" 
-              ? "bg-white/10 dark:bg-white/10 [.light_&]:bg-[#5db7de]/30 text-white dark:text-white [.light_&]:text-[#716a5c]" 
+              ? "bg-white/10 dark:bg-white/10 [.light_&]:bg-[#00a676]/30 text-white dark:text-white [.light_&]:text-[#0a2e36]" 
               : "text-muted-foreground"
           }`}
         >
@@ -124,23 +124,23 @@ export function Navbar() {
       <button
         type="button"
         onClick={toggleTheme}
-        className="rounded-full border border-white/10 dark:border-white/10 [.light_&]:border-[#716a5c]/30 bg-background/60 dark:bg-background/60 [.light_&]:bg-[#f1e9db]/80 backdrop-blur-md p-2 flex items-center justify-center hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#716a5c]/20 transition-colors"
+        className="rounded-full border border-white/10 dark:border-white/10 [.light_&]:border-[#0a2e36]/30 bg-background/60 dark:bg-background/60 [.light_&]:bg-[#f7f9f9]/80 backdrop-blur-md p-2 flex items-center justify-center hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#0a2e36]/20 transition-colors"
         aria-label="Cambiar tema"
       >
         {mounted &&
           (theme === "light" ? (
             <Sun className="h-4 w-4 text-yellow-400" />
           ) : (
-            <Moon className="h-4 w-4 text-slate-200 dark:text-slate-200 [.light_&]:text-[#716a5c]" />
+            <Moon className="h-4 w-4 text-slate-200 dark:text-slate-200 [.light_&]:text-[#0a2e36]" />
           ))}
       </button>
-      <div className="inline-flex items-center rounded-full border border-white/10 dark:border-white/10 [.light_&]:border-[#716a5c]/30 bg-background/60 dark:bg-background/60 [.light_&]:bg-[#f1e9db]/80 backdrop-blur-md text-xs font-medium overflow-hidden">
+      <div className="inline-flex items-center rounded-full border border-white/10 dark:border-white/10 [.light_&]:border-[#0a2e36]/30 bg-background/60 dark:bg-background/60 [.light_&]:bg-[#f7f9f9]/80 backdrop-blur-md text-xs font-medium overflow-hidden">
         <button
           type="button"
           onClick={() => setLanguage("es")}
           className={`px-3 py-1 transition-colors ${
             language === "es" 
-              ? "bg-white/10 dark:bg-white/10 [.light_&]:bg-[#5db7de]/30 text-white dark:text-white [.light_&]:text-[#716a5c]" 
+              ? "bg-white/10 dark:bg-white/10 [.light_&]:bg-[#00a676]/30 text-white dark:text-white [.light_&]:text-[#0a2e36]" 
               : "text-muted-foreground"
           }`}
         >
@@ -151,7 +151,7 @@ export function Navbar() {
           onClick={() => setLanguage("en")}
           className={`px-3 py-1 transition-colors ${
             language === "en" 
-              ? "bg-white/10 dark:bg-white/10 [.light_&]:bg-[#5db7de]/30 text-white dark:text-white [.light_&]:text-[#716a5c]" 
+              ? "bg-white/10 dark:bg-white/10 [.light_&]:bg-[#00a676]/30 text-white dark:text-white [.light_&]:text-[#0a2e36]" 
               : "text-muted-foreground"
           }`}
         >
@@ -163,14 +163,14 @@ export function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/80 backdrop-blur-md border-b border-white/10 dark:border-white/10 [.light_&]:border-[#716a5c]/20"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/80 backdrop-blur-md border-b border-white/10 dark:border-white/10 [.light_&]:border-[#0a2e36]/20"
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Link
               href="/"
-              className="text-xl font-bold bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#5db7de] [.light_&]:to-[#5db7de]/90 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+              className="text-xl font-bold bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#00a676] [.light_&]:to-[#00a676]/90 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
             >
               GP
             </Link>
@@ -181,31 +181,31 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-6">
             <button
               onClick={() => scrollToSection("projects")}
-              className="text-sm hover:text-primary transition-colors"
+              className="text-sm hover:text-primary dark:hover:text-primary [.light_&]:hover:text-[#00a676] transition-colors"
             >
               {t.navbar.projects}
             </button>
             <button
               onClick={() => scrollToSection("skills")}
-              className="text-sm hover:text-primary transition-colors"
+              className="text-sm hover:text-primary dark:hover:text-primary [.light_&]:hover:text-[#00a676] transition-colors"
             >
               {t.navbar.skills}
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-sm hover:text-primary transition-colors"
+              className="text-sm hover:text-primary dark:hover:text-primary [.light_&]:hover:text-[#00a676] transition-colors"
             >
               {t.navbar.about}
             </button>
             <button
               onClick={() => scrollToSection("trayectoria")}
-              className="text-sm hover:text-primary transition-colors"
+              className="text-sm hover:text-primary dark:hover:text-primary [.light_&]:hover:text-[#00a676] transition-colors"
             >
               {t.navbar.timeline}
             </button>
             <Button
               onClick={() => scrollToSection("contact")}
-              className="bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#5db7de] [.light_&]:to-[#5db7de]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#5db7de]/90 [.light_&]:hover:to-[#5db7de]/80"
+              className="bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#00a676] [.light_&]:to-[#00a676]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#00a676]/90 [.light_&]:hover:to-[#00a676]/80 text-white"
             >
               {t.navbar.contact}
             </Button>
@@ -231,31 +231,31 @@ export function Navbar() {
             <MobileToggles />
             <button
               onClick={() => scrollToSection("projects")}
-              className="block w-full text-left text-sm hover:text-primary transition-colors py-2"
+              className="block w-full text-left text-sm hover:text-primary dark:hover:text-primary [.light_&]:hover:text-[#00a676] transition-colors py-2"
             >
               {t.navbar.projects}
             </button>
             <button
               onClick={() => scrollToSection("skills")}
-              className="block w-full text-left text-sm hover:text-primary transition-colors py-2"
+              className="block w-full text-left text-sm hover:text-primary dark:hover:text-primary [.light_&]:hover:text-[#00a676] transition-colors py-2"
             >
               {t.navbar.skills}
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="block w-full text-left text-sm hover:text-primary transition-colors py-2"
+              className="block w-full text-left text-sm hover:text-primary dark:hover:text-primary [.light_&]:hover:text-[#00a676] transition-colors py-2"
             >
               {t.navbar.about}
             </button>
             <button
               onClick={() => scrollToSection("trayectoria")}
-              className="block w-full text-left text-sm hover:text-primary transition-colors py-2"
+              className="block w-full text-left text-sm hover:text-primary dark:hover:text-primary [.light_&]:hover:text-[#00a676] transition-colors py-2"
             >
               {t.navbar.timeline}
             </button>
             <Button
               onClick={() => scrollToSection("contact")}
-              className="w-full bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#5db7de] [.light_&]:to-[#5db7de]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#5db7de]/90 [.light_&]:hover:to-[#5db7de]/80"
+              className="w-full bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#00a676] [.light_&]:to-[#00a676]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#00a676]/90 [.light_&]:hover:to-[#00a676]/80 text-white"
             >
               {t.navbar.contact}
             </Button>

@@ -26,15 +26,15 @@ export const translations = {
     sections: {
       projects: {
         title: "Proyectos",
-        subtitle: "Proyectos que he construido, desde ideas hasta producción",
+        subtitle: "Proyectos que he construido, desde ideas hasta producción.",
       },
       skills: {
         title: "Habilidades y Herramientas",
-        subtitle: "Tecnologías que uso para construir productos digitales",
+        subtitle: "Tecnologías que uso para construir productos digitales.",
       },
       about: {
         title: "Sobre mí",
-        subtitle: "Conoce más sobre mi trayectoria y valores",
+        subtitle: "Conoce más sobre mi trayectoria y valores.",
       },
       timeline: {
         title: "Experiencia & Formación",
@@ -42,7 +42,7 @@ export const translations = {
       },
       contact: {
         title: "Contacto",
-        subtitle: "¿Tienes un proyecto en mente? Me encantaría escucharte",
+        subtitle: "¿Tienes un proyecto en mente? Me encantaría escucharte.",
       },
     },
     // Project Cards
@@ -81,11 +81,11 @@ export const translations = {
       paragraph3: "Esta experiencia define mi forma de trabajar: entender el problema desde dentro, diseñar una solución práctica y llevarla a producción.",
       paragraph4: "Trabajo principalmente con Next.js, React, TypeScript y Node.js, y tengo experiencia con bases de datos relacionales y no relacionales, integraciones de pagos y sistemas CRUD completos.",
       paragraph5: "Actualmente busco una oportunidad como desarrollador donde aportar impacto desde el primer día, seguir creciendo técnicamente y formar parte de un equipo orientado a producto.",
-      value1: "Ownership: Me responsabilizo de los proyectos de principio a fin",
-      value2: "Comunicación: Transparencia y claridad en cada interacción",
-      value3: "Aprendizaje continuo: Siempre buscando mejorar y aprender nuevas tecnologías",
-      value4: "Enfoque en producto: Priorizo el valor real para el usuario final",
-      value5: "Performance: Optimización y buenas prácticas en cada línea de código",
+      value1: "Ownership: Me responsabilizo de los proyectos de principio a fin.",
+      value2: "Comunicación: Transparencia y claridad en cada interacción.",
+      value3: "Aprendizaje continuo: Siempre buscando mejorar y aprender nuevas tecnologías.",
+      value4: "Enfoque en producto: Priorizo el valor real para el usuario final.",
+      value5: "Performance: Optimización y buenas prácticas en cada línea de código.",
     },
     // Timeline
     timeline: {
@@ -175,7 +175,7 @@ export const translations = {
       viewCode: "Ver Código",
       goikounter: {
         expansion: "En expansión para más de {count} locales en 2026",
-        top10Title: "Top 10 locales más rápidos de España",
+        top10Title: "Top 10 locales más rápidos de España (CRURS)",
         longDescription: "Goikounter es una herramienta de optimización operativa desarrollada para cocinas de restaurantes de alto volumen que utilizan sistemas de comandas digitales. Se trata de una extensión para Google Chrome que reorganiza y procesa en tiempo real la información visible de las comandas, ofreciendo al equipo de cocina una vista clara, estructurada y accionable del servicio. La herramienta ha sido probada en múltiples locales de una cadena nacional y ha demostrado impacto directo en la velocidad de servicio, reducción de errores y disminución de mermas. En el local donde se originó el proyecto, el uso de Goikounter contribuyó a alcanzar el Top 10 nacional en rapidez operativa durante varios meses consecutivos.",
         problem: "En cocinas con alto volumen de pedidos, la información de las comandas suele presentarse de forma desordenada o poco accionable: dificultad para calcular cantidades reales de producto a preparar, errores en pedidos modificados o con alérgenos, entrantes que pasan desapercibidos en picos de servicio, y sobrecarga cognitiva del equipo que aumenta el estrés operativo. Todo esto se traduce en mermas, retrasos y una curva de aprendizaje alta para el personal nuevo.",
         solution: "Diseñé y desarrollé Goikounter como una solución creada desde cocina y para cocina, enfocada en transformar datos ya existentes en información clara y útil. La extensión analiza las comandas en tiempo real y las traduce en contadores automáticos de productos, alertas visuales y sonoras, ayudas visuales para la preparación correcta de pedidos, y organización por secciones según el flujo real de trabajo en cocina. Todo el procesamiento se realiza localmente en el navegador, sin servidores externos ni almacenamiento de datos.",
@@ -264,15 +264,15 @@ export const translations = {
     sections: {
       projects: {
         title: "Projects",
-        subtitle: "Projects I've built, from ideas to production",
+        subtitle: "Projects I've built, from ideas to production.",
       },
       skills: {
         title: "Skills & Tools",
-        subtitle: "Technologies I use to build digital products",
+        subtitle: "Technologies I use to build digital products.",
       },
       about: {
         title: "About Me",
-        subtitle: "Learn more about my journey and values",
+        subtitle: "Learn more about my journey and values.",
       },
       timeline: {
         title: "Experience & Education",
@@ -280,7 +280,7 @@ export const translations = {
       },
       contact: {
         title: "Contact",
-        subtitle: "Do you have a project in mind? I'd love to hear from you",
+        subtitle: "Do you have a project in mind? I'd love to hear from you.",
       },
     },
     // Project Cards
@@ -319,11 +319,11 @@ export const translations = {
       paragraph3: "This experience defines my way of working: understanding the problem from within, designing a practical solution, and bringing it to production.",
       paragraph4: "I work mainly with Next.js, React, TypeScript, and Node.js, and have experience with relational and non-relational databases, payment integrations, and complete CRUD systems.",
       paragraph5: "I'm currently looking for an opportunity as a developer where I can make an impact from day one, continue growing technically, and be part of a product-oriented team.",
-      value1: "Ownership: I take responsibility for projects from start to finish",
+      value1: "Ownership: I take responsibility for projects from start to finish.",
       value2: "Communication: Transparency and clarity in every interaction",
-      value3: "Continuous learning: Always seeking to improve and learn new technologies",
-      value4: "Product focus: I prioritize real value for the end user",
-      value5: "Performance: Optimization and best practices in every line of code",
+      value3: "Continuous learning: Always seeking to improve and learn new technologies.",
+      value4: "Product focus: I prioritize real value for the end user.",
+      value5: "Performance: Optimization and best practices in every line of code.",
     },
     // Timeline
     timeline: {
@@ -413,7 +413,7 @@ export const translations = {
       viewCode: "View Code",
       goikounter: {
         expansion: "Expanding to more than {count} locations in 2026",
-        top10Title: "Top 10 fastest locations in Spain",
+        top10Title: "Top 10 fastest locations in Spain (CRURS)",
         longDescription: "Goikounter is an operational optimization tool developed for high-volume restaurant kitchens that use digital ordering systems. It is a Google Chrome extension that reorganizes and processes in real-time the visible information from orders, offering the kitchen team a clear, structured, and actionable view of the service. The tool has been tested in multiple locations of a national chain and has demonstrated direct impact on service speed, error reduction, and waste reduction. At the location where the project originated, the use of Goikounter contributed to reaching the Top 10 national ranking in operational speed for several consecutive months.",
         problem: "In kitchens with high order volume, order information is often presented in a disorganized or non-actionable way: difficulty calculating real product quantities to prepare, errors in modified orders or orders with allergens, appetizers that go unnoticed during service peaks, and cognitive overload of the team that increases operational stress. All of this translates into waste, delays, and a high learning curve for new staff.",
         solution: "I designed and developed Goikounter as a solution created from and for the kitchen, focused on transforming existing data into clear and useful information. The extension analyzes orders in real-time and translates them into automatic product counters, visual and sound alerts, visual aids for correct order preparation, and organization by sections according to the real workflow in the kitchen. All processing is done locally in the browser, without external servers or data storage.",

@@ -23,16 +23,16 @@ export function SkillsGrid() {
                 {categorySkills.map((skill) => (
                   <Card
                     key={skill.id}
-                    className={`bg-white/5 dark:bg-white/5 [.light_&]:bg-[#f1e9db]/30 border-white/10 dark:border-white/10 [.light_&]:border-[#716a5c]/30 backdrop-blur-sm hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#f1e9db]/50 hover:border-white/20 dark:hover:border-white/20 [.light_&]:hover:border-[#716a5c]/40 transition-all duration-300 ${
+                    className={`bg-white/5 dark:bg-white/5 [.light_&]:bg-[#f7f9f9]/30 border-white/10 dark:border-white/10 [.light_&]:border-[#0a2e36]/30 backdrop-blur-sm hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#f7f9f9]/50 hover:border-white/20 dark:hover:border-white/20 [.light_&]:hover:border-[#0a2e36]/40 transition-all duration-300 ${
                       skill.isCore
-                        ? "border-2 border-palette-teal/50 dark:border-palette-teal/50 [.light_&]:border-[#5db7de]/50 shadow-lg shadow-palette-teal/20 dark:shadow-palette-teal/20 [.light_&]:shadow-[#5db7de]/20"
+                        ? "border-2 border-palette-teal/50 dark:border-palette-teal/50 [.light_&]:border-[#00a676]/50 shadow-lg shadow-palette-teal/20 dark:shadow-palette-teal/20 [.light_&]:shadow-[#00a676]/20"
                         : ""
                     }`}
                   >
                     <CardContent className={`p-4 text-center ${skill.isCore ? "" : "flex items-center justify-center min-h-[80px]"}`}>
                       <div className="text-base font-medium">{skill.name}</div>
                       {skill.isCore && (
-                        <div className="mt-2 text-xs text-palette-blue dark:text-palette-blue [.light_&]:text-[#5db7de]">Core</div>
+                        <div className="mt-2 text-xs text-palette-blue dark:text-palette-blue [.light_&]:text-[#00a676]">Core</div>
                       )}
                     </CardContent>
                   </Card>

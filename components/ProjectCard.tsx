@@ -30,7 +30,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   }
 
   return (
-    <Card className="group bg-white/5 dark:bg-white/5 [.light_&]:bg-[#f1e9db]/30 border-white/10 dark:border-white/10 [.light_&]:border-[#716a5c]/20 backdrop-blur-sm hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#f1e9db]/50 hover:border-white/20 dark:hover:border-white/20 [.light_&]:hover:border-[#716a5c]/30 transition-all duration-300 hover:shadow-xl hover:shadow-palette-blue/20 dark:hover:shadow-palette-blue/20 [.light_&]:hover:shadow-[#5db7de]/20 overflow-hidden flex flex-col h-full">
+    <Card className="group bg-white/5 dark:bg-white/5 [.light_&]:bg-[#f7f9f9]/30 border-white/10 dark:border-white/10 [.light_&]:border-[#0a2e36]/20 backdrop-blur-sm hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#f7f9f9]/50 hover:border-white/20 dark:hover:border-white/20 [.light_&]:hover:border-[#0a2e36]/30 transition-all duration-300 hover:shadow-xl hover:shadow-palette-blue/20 dark:hover:shadow-palette-blue/20 [.light_&]:hover:shadow-[#00a676]/20 overflow-hidden flex flex-col h-full">
       <div className="relative h-48 overflow-hidden">
         <Image
           src={project.image}
@@ -41,7 +41,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
         {project.featured && (
           <div className="absolute top-4 left-4 z-10">
-            <Badge className="bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#5db7de] [.light_&]:to-[#5db7de]/90 text-white border-0">
+            <Badge className="bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#00a676] [.light_&]:to-[#00a676]/90 text-white border-0">
               {t.projects.featured}
             </Badge>
           </div>
@@ -61,13 +61,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <Badge
               key={tech}
               variant="outline"
-              className="border-white/20 bg-white/5"
+              className="border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 bg-white/5 hover:[.light_&]:border-[#00a676] transition-colors"
             >
               {tech}
             </Badge>
           ))}
           {project.tech.length > 4 && (
-            <Badge variant="outline" className="border-white/20 bg-white/5">
+            <Badge variant="outline" className="border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 bg-white/5 hover:[.light_&]:border-[#00a676] transition-colors">
               +{project.tech.length - 4}
             </Badge>
           )}
@@ -79,7 +79,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <Button
             variant="outline"
             size="sm"
-            className="border-white/20 bg-white/5 hover:bg-white/10"
+            className="border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 bg-white/5 hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#00a676]/10 [.light_&]:hover:border-[#00a676] transition-colors"
             asChild
           >
             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
@@ -93,7 +93,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <Button
             variant="outline"
             size="sm"
-            className="border-white/20 bg-white/5 hover:bg-white/10"
+            className="border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 bg-white/5 hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#00a676]/10 [.light_&]:hover:border-[#00a676] transition-colors"
             asChild
           >
             <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
@@ -105,7 +105,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         <Button
           size="sm"
-          className="bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#5db7de] [.light_&]:to-[#5db7de]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#5db7de]/90 [.light_&]:hover:to-[#5db7de]/80 text-white ml-auto"
+          className="bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#00a676] [.light_&]:to-[#00a676]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#00a676]/90 [.light_&]:hover:to-[#00a676]/80 text-white ml-auto"
           asChild
         >
           <Link href={`/projects/${project.slug}`}>

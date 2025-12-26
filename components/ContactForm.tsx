@@ -65,7 +65,7 @@ export function ContactForm() {
   return (
     <section id="contact" className="pt-8 pb-20 scroll-mt-20">
       <div className="container mx-auto px-4">
-        <Card className="bg-white/5 dark:bg-white/5 [.light_&]:bg-[#f1e9db]/30 border-white/10 dark:border-white/10 [.light_&]:border-[#716a5c]/20 backdrop-blur-sm max-w-2xl mx-auto">
+        <Card className="bg-white/5 dark:bg-white/5 [.light_&]:bg-[#f7f9f9]/30 border-white/10 dark:border-white/10 [.light_&]:border-[#0a2e36]/20 backdrop-blur-sm max-w-2xl mx-auto">
           <CardHeader>
           </CardHeader>
           <CardContent>
@@ -79,7 +79,7 @@ export function ContactForm() {
                     value={formData.firstName}
                     onChange={handleChange}
                     required
-                    className="bg-background/50 border-white/20"
+                    className="bg-background/50 border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 focus:[.light_&]:border-[#00a676] focus:[.light_&]:ring-[#00a676]/20 transition-colors"
                   />
                 </div>
                 <div className="space-y-2">
@@ -90,7 +90,7 @@ export function ContactForm() {
                     value={formData.lastName}
                     onChange={handleChange}
                     required
-                    className="bg-background/50 border-white/20"
+                    className="bg-background/50 border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 focus:[.light_&]:border-[#00a676] focus:[.light_&]:ring-[#00a676]/20 transition-colors"
                   />
                 </div>
               </div>
@@ -104,7 +104,7 @@ export function ContactForm() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="bg-background/50 border-white/20"
+                    className="bg-background/50 border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 focus:[.light_&]:border-[#00a676] focus:[.light_&]:ring-[#00a676]/20 transition-colors"
                 />
               </div>
 
@@ -117,13 +117,13 @@ export function ContactForm() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="bg-background/50 border-white/20"
+                    className="bg-background/50 border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 focus:[.light_&]:border-[#00a676] focus:[.light_&]:ring-[#00a676]/20 transition-colors"
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#5db7de] [.light_&]:to-[#5db7de]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#5db7de]/90 [.light_&]:hover:to-[#5db7de]/80 text-white"
+                className="w-full bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#00a676] [.light_&]:to-[#00a676]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#00a676]/90 [.light_&]:hover:to-[#00a676]/80 text-white"
                 disabled={isSubmitting || isSubmitted}
               >
                 {isSubmitting || isSubmitted ? (
@@ -160,7 +160,7 @@ export function ContactForm() {
               <div className="flex justify-center gap-4">
                 <a
                   href="mailto:zgrengo@gmail.com"
-                  className="p-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                  className="p-3 rounded-lg bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/10 [.light_&]:border-[#00a676]/50 hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#00a676]/10 [.light_&]:hover:border-[#00a676] transition-colors"
                   aria-label="Email"
                 >
                   <Mail className="h-5 w-5" />
@@ -169,7 +169,7 @@ export function ContactForm() {
                   href="https://www.linkedin.com/in/gregory-pimentel-b0744314b/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                  className="p-3 rounded-lg bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/10 [.light_&]:border-[#00a676]/50 hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#00a676]/10 [.light_&]:hover:border-[#00a676] transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="h-5 w-5" />
@@ -178,7 +178,7 @@ export function ContactForm() {
                   href="https://github.com/ZGrengo"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                  className="p-3 rounded-lg bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/10 [.light_&]:border-[#00a676]/50 hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#00a676]/10 [.light_&]:hover:border-[#00a676] transition-colors"
                   aria-label="GitHub"
                 >
                   <Github className="h-5 w-5" />

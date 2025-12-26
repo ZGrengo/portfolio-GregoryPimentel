@@ -73,8 +73,8 @@ const Squares = ({
       if (theme === 'light') {
         // Lighter gradient for light mode - less opacity and lighter color
         gradient.addColorStop(0, 'rgba(0, 0, 0, 0)');
-        gradient.addColorStop(0.7, 'rgba(241, 233, 219, 0.3)'); // palette-light-cream with low opacity
-        gradient.addColorStop(1, 'rgba(241, 233, 219, 0.6)'); // palette-light-cream with medium opacity
+        gradient.addColorStop(0.7, 'rgba(247, 249, 249, 0.3)'); // palette-light-cream with low opacity
+        gradient.addColorStop(1, 'rgba(247, 249, 249, 0.6)'); // palette-light-cream with medium opacity
       } else {
         // Dark mode - original gradient
         gradient.addColorStop(0, 'rgba(0, 0, 0, 0)');

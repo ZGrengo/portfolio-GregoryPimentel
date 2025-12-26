@@ -418,21 +418,20 @@
         max-height: 450px;
     }
 
-    .pc-details {
-        top: 1em;
+    .pc-shine {
+        animation: none; /* Disable animation on mobile */
+        filter: brightness(0.66) contrast(1.33) saturate(0.33) opacity(0.3); /* Reduce opacity */
     }
 
-    .pc-details h3 {
-        font-size: min(4svh, 2.5em);
-    }
-
-    .pc-details p {
-        font-size: 14px;
+    .pc-glare {
+        opacity: 0.2; /* Reduce glare on mobile */
     }
 
     .pc-user-info {
         --ui-inset: 15px;
         padding: 10px 12px;
+        backdrop-filter: none;
+        background: rgba(255, 255, 255, 0.15);
     }
 
     .pc-mini-avatar {
@@ -455,6 +454,18 @@
     .pc-contact-btn {
         padding: 6px 12px;
         font-size: 11px;
+    }
+
+    .pc-details {
+        top: 1em;
+    }
+
+    .pc-details h3 {
+        font-size: min(4svh, 2.5em);
+    }
+
+    .pc-details p {
+        font-size: 14px;
     }
 }
 

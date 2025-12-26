@@ -9,7 +9,7 @@ interface SectionHeadingProps {
 export function SectionHeading({ title, subtitle, className }: SectionHeadingProps) {
   return (
     <div className={`text-center mb-6 ${className || ""}`}>
-      <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-palette-teal via-palette-blue to-palette-teal dark:from-palette-teal dark:via-palette-blue dark:to-palette-teal [.light_&]:from-[#5db7de] [.light_&]:via-[#5db7de]/90 [.light_&]:to-[#5db7de] bg-clip-text text-transparent">
+      <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-palette-teal via-palette-blue to-palette-teal dark:from-palette-teal dark:via-palette-blue dark:to-palette-teal [.light_&]:from-[#00a676] [.light_&]:via-[#00a676]/90 [.light_&]:to-[#00a676] bg-clip-text text-transparent">
         {title}
       </h2>
       {subtitle && (
