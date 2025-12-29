@@ -281,9 +281,9 @@ Este proyecto es de uso personal.
 
 **Gregory Pimentel**
 
--   Portfolio: [Tu URL]
--   GitHub: [Tu GitHub]
--   LinkedIn: [Tu LinkedIn]
+-   Portfolio: https://portfolio-gregory-pimentel.vercel.app/
+-   GitHub: https://github.com/ZGrengo
+-   LinkedIn: www.linkedin.com/in/gregory-pimentel-dev
 
 ---
 
