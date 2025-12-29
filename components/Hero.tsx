@@ -10,7 +10,7 @@ import { useTranslations } from "@/hooks/useTranslations"
 import { useTheme } from "next-themes"
 
 export function Hero() {
-  const { t, translate } = useTranslations()
+  const { t, translate, language } = useTranslations()
   const { theme } = useTheme()
   const [isMobile, setIsMobile] = React.useState(false)
 
@@ -147,9 +147,12 @@ export function Hero() {
               enableTilt={true}
               enableMobileTilt={false}
               onContactClick={() => {
+                const cvFileName = language === 'es' 
+                  ? 'CV Gregory Pimentel Desarrollador Web.pdf'
+                  : 'CV Gregory Pimentel Web Developer.pdf'
                 const link = document.createElement('a')
-                link.href = '/CV Gregory Pimentel Desarrollo Web.pdf'
-                link.download = 'CV Gregory Pimentel Desarrollo Web.pdf'
+                link.href = `/${cvFileName}`
+                link.download = cvFileName
                 document.body.appendChild(link)
                 link.click()
                 document.body.removeChild(link)
