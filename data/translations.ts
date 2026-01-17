@@ -32,7 +32,7 @@ export const translations = {
         title: "Habilidades y Herramientas",
         subtitle: "Tecnologías que uso para construir productos digitales.",
         translations: {
-          "Client–server communication": "Comunicación cliente–servidor",
+          "Client-server communication": "Comunicación cliente-servidor",
           "Server-authoritative logic": "Lógica autoritativa del servidor",
         },
       },
@@ -86,11 +86,11 @@ export const translations = {
       paragraph3: "Esta experiencia define mi forma de trabajar: entender el problema desde dentro, diseñar una solución con criterio de ingeniería y llevarla a producción cuidando la fiabilidad, el mantenimiento y la evolución del sistema. No me limito a implementar funcionalidades; pienso en arquitectura, calidad del código y sostenibilidad a largo plazo.",
       paragraph4: "Trabajo principalmente con Next.js, React, TypeScript y Node.js, con experiencia en bases de datos relacionales y no relacionales, sistemas CRUD completos, integraciones externas y mantenimiento de aplicaciones en producción.",
       paragraph5: "Actualmente busco una oportunidad como Software / Full Stack Developer donde aportar impacto desde el primer día, seguir creciendo técnicamente y formar parte de un equipo orientado a producto y buenas prácticas de ingeniería.",
-      value1: "Ownership — Asumo la responsabilidad completa de los proyectos, desde el diseño hasta el mantenimiento en producción.",
-      value2: "Comunicación — Priorizo la claridad, la transparencia y la colaboración efectiva en equipos técnicos.",
-      value3: "Aprendizaje continuo — Me mantengo en constante evolución técnica y metodológica.",
-      value4: "Enfoque en producto — Desarrollo soluciones pensando en el valor real para el usuario final y el negocio.",
-      value5: "Calidad y performance — Aplico buenas prácticas, optimización y cuidado del código en cada etapa del desarrollo.",
+      value1: "Ownership - Asumo la responsabilidad completa de los proyectos, desde el diseño hasta el mantenimiento en producción.",
+      value2: "Comunicación - Priorizo la claridad, la transparencia y la colaboración efectiva en equipos técnicos.",
+      value3: "Aprendizaje continuo - Me mantengo en constante evolución técnica y metodológica.",
+      value4: "Enfoque en producto - Desarrollo soluciones pensando en el valor real para el usuario final y el negocio.",
+      value5: "Calidad y performance - Aplico buenas prácticas, optimización y cuidado del código en cada etapa del desarrollo.",
     },
     // Timeline
     timeline: {
@@ -98,9 +98,9 @@ export const translations = {
       education: "Educación",
       items: {
         goikounter: {
-          title: "Full Stack Developer — Goikounter",
+          title: "Full Stack Developer - Goikounter",
           org: "Goiko (producción en restaurantes)",
-          period: "2025 — Presente",
+          period: "2025 - Presente",
           description: "Diseñé, desarrollé y mantengo una herramienta de optimización de comandas nacida directamente desde la operación real en cocina, actualmente desplegada en 10+ restaurantes y con visión de escalar al resto de la compañía. Este proyecto me permitió trabajar el desarrollo de software desde una perspectiva práctica, orientada a negocio y sostenibilidad técnica, más allá de un simple prototipo.",
           highlights: [
             "Desarrollo end-to-end, desde el diseño funcional hasta la implementación y mantenimiento en producción",
@@ -128,7 +128,7 @@ export const translations = {
         practicas: {
           title: "Desarrollador Web (Prácticas)",
           org: "Universidad Antonio José de Sucre",
-          period: "07/2020 — 04/2021",
+          period: "07/2020 - 04/2021",
           description: "Participé en el desarrollo y mantenimiento de plataformas web institucionales, colaborando en la gestión de usuarios y en la creación de una aplicación para el seguimiento de cobranzas.",
           highlights: [
             "Administración de accesos y permisos de usuarios",
@@ -140,7 +140,7 @@ export const translations = {
         frontend: {
           title: "Desarrollador Frontend Junior",
           org: "Lonbech",
-          period: "01/2020 — 07/2020",
+          period: "01/2020 - 07/2020",
           description: "Colaboré en el diseño y mantenimiento de sitios web y material digital, contribuyendo a la mejora de la presencia online y la adaptación de interfaces responsivas.",
           highlights: [
             "Edición y actualización de sitios web con HTML, CSS y WordPress",
@@ -152,7 +152,7 @@ export const translations = {
         ingenieria: {
           title: "Ingeniería de Sistemas",
           org: "Universidad",
-          period: "2014 — 2020",
+          period: "2014 - 2020",
           description: "Formación académica orientada al diseño y desarrollo de sistemas de software robustos, con una base sólida en arquitectura de sistemas, buenas prácticas de desarrollo, algoritmos y estructuras de datos, optimización de procesos y modelado de sistemas. Esta formación me permite abordar el desarrollo de software desde una perspectiva técnica, estratégica y sostenible, más allá de la implementación visual o funcional.",
           highlights: [
             "Arquitectura de sistemas y diseño modular",
@@ -166,7 +166,7 @@ export const translations = {
         cocina: {
           title: "Cocina profesional (alto volumen)",
           org: "España",
-          period: "2021 — Presente",
+          period: "2021 - Presente",
           description: "Entorno de alta presión que fortaleció mi atención al detalle, organización y mentalidad resolutiva; origen del problema que dio lugar a Goikounter.",
         },
       },
@@ -312,7 +312,7 @@ export const translations = {
         title: "Skills & Tools",
         subtitle: "Technologies I use to build digital products.",
         translations: {
-          "Client–server communication": "Client–server communication",
+          "Client-server communication": "Client-server communication",
           "Server-authoritative logic": "Server-authoritative logic",
         },
       },
@@ -366,11 +366,11 @@ export const translations = {
       paragraph3: "This experience defines my way of working: understanding the problem from within, designing a solution with engineering criteria and bringing it to production while ensuring reliability, maintenance and system evolution. I don't just implement features; I think about architecture, code quality and long-term sustainability.",
       paragraph4: "I work mainly with Next.js, React, TypeScript and Node.js, with experience in relational and non-relational databases, complete CRUD systems, external integrations and maintaining applications in production.",
       paragraph5: "I'm currently looking for an opportunity as a Software / Full Stack Developer where I can make an impact from day one, continue growing technically, and be part of a product-oriented team focused on engineering best practices.",
-      value1: "Ownership — I take full responsibility for projects, from design to production maintenance.",
-      value2: "Communication — I prioritize clarity, transparency and effective collaboration in technical teams.",
-      value3: "Continuous learning — I maintain constant technical and methodological evolution.",
-      value4: "Product focus — I develop solutions thinking about real value for end users and the business.",
-      value5: "Quality and performance — I apply best practices, optimization and code care at every stage of development.",
+      value1: "Ownership - I take full responsibility for projects, from design to production maintenance.",
+      value2: "Communication - I prioritize clarity, transparency and effective collaboration in technical teams.",
+      value3: "Continuous learning - I maintain constant technical and methodological evolution.",
+      value4: "Product focus - I develop solutions thinking about real value for end users and the business.",
+      value5: "Quality and performance - I apply best practices, optimization and code care at every stage of development.",
     },
     // Timeline
     timeline: {
@@ -378,9 +378,9 @@ export const translations = {
       education: "Education",
       items: {
         goikounter: {
-          title: "Full Stack Developer — Goikounter",
+          title: "Full Stack Developer - Goikounter",
           org: "Goiko (production in restaurants)",
-          period: "2025 — Present",
+          period: "2025 - Present",
           description: "I designed, developed and maintain an order optimization tool born directly from real kitchen operations, currently deployed in 10+ restaurants with a vision to scale to the rest of the company. This project allowed me to work on software development from a practical, business-oriented and technical sustainability perspective, beyond a simple prototype.",
           highlights: [
             "End-to-end development, from functional design to implementation and production maintenance",
@@ -408,7 +408,7 @@ export const translations = {
         practicas: {
           title: "Web Developer (Internship)",
           org: "Antonio José de Sucre University",
-          period: "07/2020 — 04/2021",
+          period: "07/2020 - 04/2021",
           description: "I participated in the development and maintenance of institutional web platforms, collaborating in user management and creating an application for payment tracking.",
           highlights: [
             "User access and permissions administration",
@@ -420,7 +420,7 @@ export const translations = {
         frontend: {
           title: "Junior Frontend Developer",
           org: "Lonbech",
-          period: "01/2020 — 07/2020",
+          period: "01/2020 - 07/2020",
           description: "I collaborated in the design and maintenance of websites and digital materials, contributing to improving online presence and adapting responsive interfaces.",
           highlights: [
             "Editing and updating websites with HTML, CSS and WordPress",
@@ -432,7 +432,7 @@ export const translations = {
         ingenieria: {
           title: "Systems Engineering",
           org: "University",
-          period: "2014 — 2020",
+          period: "2014 - 2020",
           description: "Academic training focused on the design and development of robust software systems, with a solid foundation in system architecture, development best practices, algorithms and data structures, process optimization, and system modeling. This training allows me to approach software development from a technical, strategic, and sustainable perspective, beyond visual or functional implementation.",
           highlights: [
             "System architecture and modular design",
@@ -446,7 +446,7 @@ export const translations = {
         cocina: {
           title: "Professional kitchen (high volume)",
           org: "Spain",
-          period: "2021 — Present",
+          period: "2021 - Present",
           description: "High-pressure environment that strengthened my attention to detail, organization and problem-solving mindset; origin of the problem that led to Goikounter.",
         },
       },

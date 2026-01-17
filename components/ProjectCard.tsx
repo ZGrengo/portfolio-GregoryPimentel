@@ -51,13 +51,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       <CardHeader>
         <CardTitle className="text-2xl">{project.title}</CardTitle>
-        <CardDescription className="text-base whitespace-pre-line">
-          {getTranslatedDescription()}
-        </CardDescription>
       </CardHeader>
 
-      <CardContent className="flex-grow">
-        <div className="flex flex-wrap gap-2 mb-4">
+      <CardContent className="flex flex-col flex-grow">
+        <CardDescription className="text-base whitespace-pre-line flex-grow mb-4">
+          {getTranslatedDescription()}
+        </CardDescription>
+        <div className="flex flex-wrap gap-2 mt-auto">
           {project.tech.slice(0, 4).map((tech) => (
             <Badge
               key={tech}
@@ -75,38 +75,43 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </CardContent>
 
-      <CardFooter className="flex flex-wrap gap-2 mt-auto">
-        {project.liveUrl ? (
-          <Button
-            variant="outline"
-            size="sm"
-            className="border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 bg-white/5 hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#00a676]/10 [.light_&]:hover:border-[#00a676] transition-colors"
-            asChild
-          >
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="mr-2 h-4 w-4" />
-              {t.projects.demo}
-            </a>
-          </Button>
-        ) : null}
+      <CardFooter className="flex flex-col sm:flex-row flex-wrap gap-2 mt-auto">
+        <div className="flex flex-wrap gap-2 w-full sm:w-auto">
+          {project.liveUrl ? (
+            <Button
+              variant="outline"
+              size="sm"
+              className="border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 bg-white/5 hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#00a676]/10 [.light_&]:hover:border-[#00a676] transition-colors"
+              asChild
+            >
+              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="mr-2 h-4 w-4" />
+                {t.projects.demo}
+              </a>
+            </Button>
+          ) : null}
 
-        {project.codeUrl ? (
-          <Button
-            variant="outline"
-            size="sm"
-            className="border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 bg-white/5 hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#00a676]/10 [.light_&]:hover:border-[#00a676] transition-colors"
-            asChild
-          >
-            <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
-              <Code className="mr-2 h-4 w-4" />
-              {t.projects.code}
-            </a>
-          </Button>
-        ) : null}
+          {project.codeUrl ? (
+            <Button
+              variant="outline"
+              size="sm"
+              className="border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 bg-white/5 hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#00a676]/10 [.light_&]:hover:border-[#00a676] transition-colors"
+              asChild
+            >
+              <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
+                <Code className="mr-2 h-4 w-4" />
+                <span className="hidden sm:inline">{t.projects.code}</span>
+                <span className="sm:hidden">
+                  {t.projects.code.replace(/^(Ver |View )/, "")}
+                </span>
+              </a>
+            </Button>
+          ) : null}
+        </div>
 
         <Button
           size="sm"
-          className="bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#00a676] [.light_&]:to-[#00a676]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#00a676]/90 [.light_&]:hover:to-[#00a676]/80 text-white ml-auto"
+          className="bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#00a676] [.light_&]:to-[#00a676]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#00a676]/90 [.light_&]:hover:to-[#00a676]/80 text-white w-full sm:w-auto sm:ml-auto justify-center"
           asChild
         >
           <Link href={`/projects/${project.slug}`}>
