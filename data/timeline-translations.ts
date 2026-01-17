@@ -43,6 +43,7 @@ export function getTimeline(language: "es" | "en"): TimelineItem[] {
       period: t.ingenieria.period,
       type: "Education",
       description: t.ingenieria.description,
+      highlights: t.ingenieria.highlights ? [...t.ingenieria.highlights] : undefined,
     },
     {
       title: t.cocina.title,

@@ -142,7 +142,7 @@ export function Hero() {
               handle="zgrengo"
               status={t.hero.status}
               contactText={t.hero.downloadCV}
-              avatarUrl="/Profile.png"
+              avatarUrl="/Profile.webp"
               showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}

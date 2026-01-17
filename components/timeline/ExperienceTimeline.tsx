@@ -1,11 +1,96 @@
 "use client"
 
+import React from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { useTranslations } from "@/hooks/useTranslations"
 
 type TimelineType = "Work" | "Education"
+
+// Keywords to highlight (technologies and strategies)
+const highlightKeywords = [
+  // Technologies
+  "React", "Node.js", "MySQL", "HTML", "CSS", "WordPress", "JSON",
+  "TypeScript", "JavaScript", "Next.js", "Express", "Socket.IO",
+  "MongoDB", "Frontend", "Backend", "Full stack", "full stack",
+  // Methodologies & Strategies
+  "Scrum", "Scrumban", "end-to-end", "refactorización", "refactoring",
+  "metodologías ágiles", "agile methodologies", "sprints", "dailies",
+  "reviews", "retrospectivas", "retrospectives", "planificación", "planning",
+  "mantenimiento", "maintenance", "optimización", "optimization",
+  "validación", "validation", "arquitectura", "architecture",
+  "diseño modular", "modular design", "buenas prácticas", "best practices",
+  "algoritmos", "algorithms", "estructuras de datos", "data structures",
+  "producción", "production", "implementación", "implementation",
+  "desarrollo", "development", "sostenibilidad técnica", "technical sustainability",
+  "colaboración", "collaboration", "comunicación técnica", "technical communication",
+  "resolución de problemas", "problem solving", "liderazgo", "leadership",
+  "coordinación", "coordination", "fiabilidad", "reliability", "robustez", "robustness"
+]
+
+// Function to highlight keywords in text
+function highlightKeywordsInText(text: string): React.ReactNode {
+  // Sort keywords by length (longest first) to match multi-word phrases first
+  const sortedKeywords = [...highlightKeywords].sort((a, b) => b.length - a.length)
+  
+  // Collect all matches from all keywords
+  const allMatches: Array<{ index: number; length: number; text: string }> = []
+  
+  for (const keyword of sortedKeywords) {
+    // Escape special regex characters
+    const escapedKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    // Match keyword as whole word/phrase (case insensitive)
+    // Use word boundaries for single words, but allow spaces/hyphens for phrases
+    const isMultiWord = keyword.includes(' ') || keyword.includes('-')
+    const pattern = isMultiWord
+      ? new RegExp(`(${escapedKeyword})`, 'gi')
+      : new RegExp(`\\b(${escapedKeyword})\\b`, 'gi')
+    
+    let match
+    while ((match = pattern.exec(text)) !== null) {
+      // Check if this match overlaps with an already collected match
+      const overlaps = allMatches.some(m => 
+        (match!.index >= m.index && match!.index < m.index + m.length) ||
+        (m.index >= match!.index && m.index < match!.index + match![0].length)
+      )
+      
+      if (!overlaps) {
+        allMatches.push({
+          index: match.index,
+          length: match[0].length,
+          text: match[0]
+        })
+      }
+    }
+  }
+  
+  // Sort matches by index
+  allMatches.sort((a, b) => a.index - b.index)
+  
+  // Build result
+  const result: React.ReactNode[] = []
+  let currentIndex = 0
+  
+  for (const m of allMatches) {
+    // Add text before match
+    if (m.index > currentIndex) {
+      result.push(text.substring(currentIndex, m.index))
+    }
+    
+    // Add highlighted keyword
+    result.push(<strong key={m.index}>{m.text}</strong>)
+    
+    currentIndex = m.index + m.length
+  }
+  
+  // Add remaining text
+  if (currentIndex < text.length) {
+    result.push(text.substring(currentIndex))
+  }
+  
+  return result.length > 0 ? <>{result}</> : text
+}
 
 export type TimelineItem = {
   title: string
@@ -68,12 +153,12 @@ export function ExperienceTimeline({
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <p className="text-sm text-muted-foreground leading-relaxed text-justify">
-                    {item.description}
+                    {highlightKeywordsInText(item.description)}
                   </p>
                   {item.highlights?.length ? (
                     <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted-foreground">
                       {item.highlights.map((h, i) => (
-                        <li key={i}>{h}</li>
+                        <li key={i}>{highlightKeywordsInText(h)}</li>
                       ))}
                     </ul>
                   ) : null}

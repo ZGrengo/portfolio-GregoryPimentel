@@ -1,6 +1,8 @@
 import React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { skills, skillsByCategory } from "@/data/skills"
+import { useTranslations } from "@/hooks/useTranslations"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const categoryLabels = {
   frontend: "Frontend",
@@ -10,6 +12,21 @@ const categoryLabels = {
 }
 
 export function SkillsGrid() {
+  const { t } = useTranslations()
+  const { language } = useLanguage()
+  
+  // Function to get translated skill name
+  const getSkillName = (skillName: string): string => {
+    // Access translations safely
+    const skillsSection = t.skills as any
+    if (skillsSection?.translations && typeof skillsSection.translations === 'object') {
+      const translated = skillsSection.translations[skillName]
+      if (translated) {
+        return translated
+      }
+    }
+    return skillName
+  }
   return (
     <section id="skills" className="pt-8 pb-20 scroll-mt-20">
       <div className="container mx-auto px-4">
@@ -30,7 +47,7 @@ export function SkillsGrid() {
                     }`}
                   >
                     <CardContent className={`p-4 text-center ${skill.isCore ? "" : "flex items-center justify-center min-h-[80px]"}`}>
-                      <div className="text-base font-medium">{skill.name}</div>
+                      <div className="text-base font-medium">{getSkillName(skill.name)}</div>
                       {skill.isCore && (
                         <div className="mt-2 text-xs text-palette-blue dark:text-palette-blue [.light_&]:text-[#00a676]">Core</div>
                       )}

@@ -33,6 +33,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
       "portfolio-generator": "portfolioGenerator",
       "ecommerce-php": "ecommercePhp",
       "flight-search": "hackaflight",
+      "think-fast": "thinkFast",
     }
     
     const key = slugToKey[project.slug]
@@ -110,6 +111,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
                   "portfolio-generator": "portfolioGenerator",
                   "ecommerce-php": "ecommercePhp",
                   "flight-search": "hackaflight",
+                  "think-fast": "thinkFast",
                 }
                 const key = slugToKey[project.slug]
                 return key ? t.projects.descriptions[key] : project.description

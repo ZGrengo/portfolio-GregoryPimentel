@@ -113,10 +113,11 @@
     mask-position: top calc(200% - (var(--background-y) * 5)) left
         calc(100% - var(--background-x));
     transition: filter 0.8s ease;
-    filter: brightness(0.66) contrast(1.33) saturate(0.33) opacity(0.5);
+    filter: brightness(0.66) contrast(1.33) saturate(0.33) opacity(0);
     animation: holo-bg 18s linear infinite;
     animation-play-state: running;
     mix-blend-mode: color-dodge;
+    display: none;
 }
 
 .pc-shine,
@@ -228,8 +229,9 @@
     );
     mix-blend-mode: overlay;
     filter: brightness(0.5) contrast(0.8);
-    opacity: 0.4;
+    opacity: 0;
     z-index: 4;
+    display: none;
 }
 
 .pc-avatar-content {
@@ -360,7 +362,7 @@
 .pc-details {
     width: 100%;
     position: absolute;
-    top: 1.5em;
+    top: 0.8em;
     display: flex;
     flex-direction: column;
 }
@@ -380,7 +382,7 @@
 .pc-details p {
     font-weight: 600;
     position: relative;
-    top: -12px;
+    top: 0.3em;
     white-space: nowrap;
     font-size: 16px;
     margin: 0 auto;
@@ -457,7 +459,7 @@
     }
 
     .pc-details {
-        top: 1em;
+        top: 0.6em;
     }
 
     .pc-details h3 {
@@ -476,7 +478,7 @@
     }
 
     .pc-details {
-        top: 0.8em;
+        top: 0.5em;
     }
 
     .pc-details h3 {
@@ -485,7 +487,7 @@
 
     .pc-details p {
         font-size: 12px;
-        top: -8px;
+        top: 0.1em;
     }
 
     .pc-user-info {

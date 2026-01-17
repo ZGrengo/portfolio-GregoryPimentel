@@ -41,12 +41,37 @@ export const skills: Skill[] = [
     name: "shadcn/ui",
     category: "frontend"
   },
+  {
+    id: "socketio-client",
+    name: "Socket.IO (Client)",
+    category: "frontend"
+  },
+  {
+    id: "framer-motion",
+    name: "Framer Motion",
+    category: "frontend"
+  },
+  {
+    id: "websockets",
+    name: "WebSockets",
+    category: "frontend"
+  },
   // Backend
   {
     id: "nodejs",
     name: "Node.js",
     category: "backend",
     isCore: true
+  },
+  {
+    id: "express",
+    name: "Express",
+    category: "backend"
+  },
+  {
+    id: "socketio-server",
+    name: "Socket.IO (Server)",
+    category: "backend"
   },
   {
     id: "php",
@@ -65,6 +90,26 @@ export const skills: Skill[] = [
     category: "database"
   },
   // Other
+  {
+    id: "monorepo",
+    name: "Monorepo",
+    category: "other"
+  },
+  {
+    id: "client-server-types",
+    name: "Client–server communication",
+    category: "other"
+  },
+  {
+    id: "server-authoritative",
+    name: "Server-authoritative logic",
+    category: "other"
+  },
+  {
+    id: "zod",
+    name: "Zod",
+    category: "other"
+  },
   {
     id: "html",
     name: "HTML",
