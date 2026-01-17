@@ -17,11 +17,11 @@ export function SkillsGrid() {
   
   // Function to get translated skill name
   const getSkillName = (skillName: string): string => {
-    // Access translations safely
-    const skillsSection = t.skills as any
+    // Access translations safely - skills is in sections
+    const skillsSection = (t.sections as any)?.skills
     if (skillsSection?.translations && typeof skillsSection.translations === 'object') {
       const translated = skillsSection.translations[skillName]
-      if (translated) {
+      if (translated && typeof translated === 'string') {
         return translated
       }
     }
