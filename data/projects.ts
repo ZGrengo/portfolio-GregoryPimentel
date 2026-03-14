@@ -245,6 +245,56 @@ export const projects: Project[] = [
     solution: "Construí un monorepo con un servidor Socket.IO que mantiene el estado de cada sala en memoria y actúa como fuente de verdad (arquitectura autoritativa). El cliente Next.js se encarga de la UI interactiva, animaciones y gestos, pero nunca decide el estado final: solo envía inputs (flip/claim/gestos) y renderiza el ROOM_STATE emitido por el servidor. Para mejorar la experiencia real: implementé claims tocando la pila (sin botón) para imitar el juego físico y permitir errores involuntarios, añadí cartas especiales que requieren gestos (click frenzy, burbujas, círculo) y validación robusta, optimicé la carga de assets con WebP, next/image y precarga de imágenes críticas para que el primer turno sea fluido, y en producción, añadí UI de \"preparando servidor\" para mitigar el spin-down de Render.",
     liveUrl: "https://thinkfast-web.vercel.app/",
     codeUrl: "https://github.com/ZGrengo/Taco-Gato-Capibara-Churro-Donut-Web-game"
-  }
+    },
+  {
+    id: "6",
+    slug: "quedaflow",
+    title: "QuedaFlow",
+    description:
+      "Aplicación web para coordinar reuniones entre personas con horarios variables (turnos rotativos, guardias, hostelería, retail, etc.), analizando bloques de ocupación y encontrando automáticamente los mejores huecos disponibles.",
+    longDescription:
+      "QuedaFlow es una aplicación web diseñada para equipos con horarios cambiantes (turnos rotativos, guardias, hostelería, retail, etc.) donde coordinar reuniones se vuelve un caos. Permite crear grupos por código, definir una ventana de planificación y añadir bloques de tiempo WORK, UNAVAILABLE o PREFERRED, ya sea manualmente o importando capturas de aplicaciones de horarios mediante OCR. A partir de esa información, el sistema convierte todos los bloques a minutos desde medianoche, respeta reglas configurables por el host (buffers antes de turnos, umbral mínimo de coincidencia, ventanas horarias bloqueadas, duración mínima de reunión) y calcula automáticamente los mejores huecos posibles. El resultado es un planner inteligente que traduce horarios complejos en decisiones claras, accionables y basadas en datos reales.",
+    featured: true,
+    image: "/QuedaFlow/Desktop/Bloques de horarioDesktop.PNG",
+    gallery: [
+      {
+        src: "/QuedaFlow/Desktop/Bloques de horarioDesktop.PNG",
+        alt: "QuedaFlow - Bloques de horario y planificación",
+        kind: "desktop",
+        featured: true,
+      },
+    ],
+    tech: [
+      "Angular 17",
+      "TypeScript",
+      "Angular Material",
+      "Supabase (Auth + Postgres + RLS)",
+      "Tesseract.js (OCR)",
+      "Vitest",
+      "SCSS",
+      "Arquitectura Clean / Domain-driven",
+    ],
+    features: [
+      "Grupos por código de 6 caracteres",
+      "Autenticación con magic link (Supabase Auth) y RLS a nivel de base de datos",
+      "Gestión de bloques WORK, UNAVAILABLE y PREFERRED (máximo 3 por usuario)",
+      "Buffer automático configurable antes de cada turno (ej. 20 minutos)",
+      "División automática de bloques que cruzan medianoche",
+      "Ventanas horarias bloqueadas configurables por el host",
+      "Umbral de coincidencia configurable (verde / amarillo / rojo) y duración mínima de reunión",
+      "Cálculo automático de mejores huecos según disponibilidad real del grupo",
+      "Importación de horarios mediante OCR tolerante a múltiples formatos de fecha y hora",
+      "Parser que normaliza texto, une rangos partidos y asocia horas a fechas por contexto",
+      "Validaciones suaves y normalización de inputs de hora",
+      "Arquitectura con separación clara entre UI, servicios y dominio testeable",
+      "Responsive optimizado para móvil y desplegable en Vercel / Netlify + Supabase",
+    ],
+    problem:
+      "Coordinar reuniones entre personas con turnos variables es caótico: los horarios cambian cada semana, existen turnos partidos y cruces de medianoche, no todos los días son igual de óptimos y muchas herramientas tipo Doodle no contemplan reglas reales como buffers antes del trabajo o ventanas horarias excluidas. Además, mucha gente no usa calendarios digitales estructurados, sino capturas de pantalla de aplicaciones de horarios. Esto hace que canales como WhatsApp no escalen y que cuadrar un simple hueco común se convierta en un intercambio interminable de mensajes y capturas.",
+    solution:
+      "Construí QuedaFlow como una aplicación con arquitectura limpia y lógica de dominio desacoplada, donde cada grupo define su ventana de planificación y los usuarios añaden bloques WORK, UNAVAILABLE o PREFERRED. El host configura buffers antes de los turnos, umbral mínimo de coincidencia, ventanas excluidas y duración mínima de reunión. El sistema convierte todos los bloques a minutos desde medianoche, gestiona automáticamente cruces de medianoche y aplica las reglas del host para calcular huecos disponibles y clasificarlos por nivel de coincidencia (100%, ≥ umbral configurado, menor coincidencia). Además, implementé un módulo de OCR tolerante que normaliza el texto detectado, soporta múltiples formatos de fecha y hora, une rangos partidos en varias líneas, asocia horas a fechas por contexto y marca incidencias si algo queda fuera del rango configurado. De este modo, coordinar una reunión se reduce a elegir entre slots claros y accionables basados en datos reales.",
+    liveUrl: "https://quedaflow.netlify.app/",
+    codeUrl: "https://github.com/ZGrengo/QuedaFlow",
+  },
 ]
 

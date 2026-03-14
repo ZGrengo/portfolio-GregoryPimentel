@@ -27,6 +27,11 @@ export const skills: Skill[] = [
     isCore: true
   },
   {
+    id: "angular",
+    name: "Angular",
+    category: "frontend"
+  },
+  {
     id: "javascript",
     name: "JavaScript",
     category: "frontend"

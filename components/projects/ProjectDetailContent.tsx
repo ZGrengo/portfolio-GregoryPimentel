@@ -34,6 +34,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
       "ecommerce-php": "ecommercePhp",
       "flight-search": "hackaflight",
       "think-fast": "thinkFast",
+      quedaflow: "quedaflow",
     }
     
     const key = slugToKey[project.slug]

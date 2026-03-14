@@ -14,7 +14,7 @@ export const translations = {
       title2: "Full Stack Developer",
       subtitle: "Aplicaciones web listas para producción",
       description: "He desarrollado múltiples proyectos, incluyendo una aplicación en producción utilizada en más de {restaurants} restaurantes.",
-      projects: "5",
+      projects: "6",
       restaurants: "10",
       ctaProjects: "Ver Proyectos",
       ctaContact: "Contacto",
@@ -63,6 +63,7 @@ export const translations = {
         ecommercePhp: "Plataforma e-commerce desarrollada en PHP con CRUD de productos, base de datos MySQL y pasarela de pagos PayPal.",
         hackaflight: "Buscador de vuelos con filtros avanzados y operaciones CRUD, enfocado en experiencia de usuario y claridad de datos.",
         thinkFast: "Juego web multijugador en tiempo real inspirado en el \"game feel\" de Taco Gato Cabra Queso Pizza, adaptado a navegador con salas por código, turnos, claim sobre la pila, cartas especiales con gestos, animaciones y sonidos.",
+        quedaflow: "Aplicación web para coordinar reuniones entre personas con horarios variables (turnos rotativos, guardias, hostelería, retail, etc.), convirtiendo bloques de ocupación en huecos óptimos según reglas configurables por el host.",
       },
     },
     // Contact Form
@@ -277,6 +278,29 @@ export const translations = {
           "Deploy: Vercel (web) + Render (server), con CORS y warm-up /health"
         ],
       },
+      quedaflow: {
+        longDescription:
+          "QuedaFlow es una aplicación web para coordinar reuniones entre personas con horarios variables (turnos rotativos, guardias, hostelería, retail, etc.). Permite crear grupos por código, definir una ventana de planificación y añadir bloques de tiempo WORK, UNAVAILABLE o PREFERRED, ya sea manualmente o importando capturas de pantalla de apps de horarios mediante OCR. A partir de esos bloques, el sistema convierte todo a minutos desde medianoche, respeta las reglas configuradas por el host (rango de planificación, buffers antes de turnos, umbral mínimo de coincidencia, ventanas bloqueadas y duración mínima de reunión) y calcula automáticamente los mejores huecos posibles. El objetivo es reducir la coordinación a una lista clara de slots accionables, basada en datos reales y no en interminables cadenas de mensajes.",
+        problem:
+          "Coordinar reuniones cuando cada persona tiene turnos distintos es caótico: los horarios cambian cada semana, hay turnos partidos y cruces de medianoche, no todos los días son igualmente óptimos y muchas herramientas tipo Doodle no contemplan reglas reales como buffers antes del trabajo o ventanas horarias excluidas. Además, muchas personas no usan calendarios digitales estructurados, sino capturas de pantalla de apps de horarios. Esto hace que canales como WhatsApp no escalen y que encontrar un simple hueco común implique revisar y comparar manualmente fotos y mensajes.",
+        solution:
+          "Diseñé QuedaFlow como una solución práctica y realista pensada para equipos con turnos cambiantes. Cada grupo define su ventana de planificación, los usuarios añaden bloques WORK, UNAVAILABLE o PREFERRED (máximo 3 por usuario) y el host configura buffers automáticos antes de cada turno, umbral mínimo de coincidencia, ventanas excluidas y duración mínima de reunión. El sistema convierte los bloques a minutos desde medianoche, gestiona cruces de medianoche con división automática, filtra lo que queda fuera de rango y analiza la disponibilidad por intervalos, clasificando los resultados por nivel de coincidencia (100%, ≥ umbral configurado, menor coincidencia). Además, implementé un módulo de OCR tolerante que normaliza el texto detectado, soporta múltiples formatos de fecha y hora, une rangos partidos en varias líneas, asocia horas a fechas por contexto y marca incidencias si algo queda fuera del rango configurado. El resultado es un planner inteligente que traduce horarios complejos en decisiones claras y accionables.",
+        features: [
+          "Grupos por código de 6 caracteres",
+          "Ventana de planificación configurable por grupo",
+          "Gestión de bloques WORK, UNAVAILABLE y PREFERRED (máximo 3 por usuario)",
+          "Buffer automático antes de cada turno (ej. 20 minutos) configurable por el host",
+          "División automática de bloques que cruzan medianoche",
+          "Ventanas horarias excluidas configurables (ej. 00:00–07:59)",
+          "Umbral mínimo de coincidencia configurable y clasificación de huecos (verde / amarillo / rojo)",
+          "Duración mínima de reunión configurable",
+          "Cálculo automático de mejores huecos a partir de la disponibilidad real del grupo",
+          "Importación de horarios mediante OCR tolerante a formatos y ruido",
+          "Parser que normaliza texto, une rangos partidos y asocia horas a fechas por contexto",
+          "Marcado de incidencias cuando bloques quedan fuera del rango configurado",
+          "Arquitectura con separación clara entre UI, servicios y dominio testeable (Clean / DDD)",
+        ],
+      },
     },
   },
   en: {
@@ -294,7 +318,7 @@ export const translations = {
       title2: "Full Stack Developer",
       subtitle: "Production-ready web applications",
       description: "I've developed multiple projects, including an application in production used in more than {restaurants} restaurants.",
-      projects: "5",
+      projects: "6",
       restaurants: "10",
       ctaProjects: "View Projects",
       ctaContact: "Contact",
@@ -343,6 +367,7 @@ export const translations = {
         ecommercePhp: "E-commerce platform developed in PHP with product CRUD, MySQL database and PayPal payment gateway.",
         hackaflight: "Flight search engine with advanced filters and CRUD operations, focused on user experience and data clarity.",
         thinkFast: "Real-time multiplayer web game inspired by the \"game feel\" of Taco Cat Goat Cheese Pizza, adapted for browser with code-based rooms, turns, pile claims, special cards with gestures, animations and sounds.",
+        quedaflow: "Web application to coordinate meetings between people with variable schedules (rotating shifts, on-call duty, hospitality, retail, etc.), turning availability blocks into optimal slots based on host-configurable rules.",
       },
     },
     // Contact Form
@@ -555,6 +580,29 @@ export const translations = {
           "Sounds and music: SFX per event (turn win/lose, oops, specials), dynamic pitch on launches based on pile size, optional music disabled by default",
           "Mobile optimizations: static piles, simplified animations, disabled effects, GPU acceleration, flying cards limit",
           "Deploy: Vercel (web) + Render (server), with CORS and warm-up /health"
+        ],
+      },
+      quedaflow: {
+        longDescription:
+          "QuedaFlow is a web application for coordinating meetings between people with variable schedules (rotating shifts, on-call duty, hospitality, retail, etc.). It lets you create groups by code, define a planning window and add WORK, UNAVAILABLE or PREFERRED time blocks, either manually or by importing screenshots from schedule apps via OCR. From those blocks, the system converts everything to minutes since midnight, respects the rules configured by the host (planning range, buffers before shifts, minimum match threshold, blocked windows and minimum meeting duration) and automatically calculates the best possible time slots. The goal is to reduce coordination to a clear list of actionable slots, based on real data instead of endless message threads.",
+        problem:
+          "Coordinating meetings when everyone has different shifts is chaotic: schedules change every week, there are split shifts and midnight crossings, not all days are equally good and many Doodle-style tools don't handle real-world rules like buffers before work or excluded time windows. On top of that, many people don't use structured digital calendars but rather screenshots from schedule apps. This makes channels like WhatsApp impossible to scale and turns finding a single common slot into manually scanning and comparing photos and messages.",
+        solution:
+          "I designed QuedaFlow as a practical and realistic solution for teams with changing shifts. Each group defines its planning window, users add WORK, UNAVAILABLE or PREFERRED blocks (maximum 3 per user), and the host configures automatic buffers before each shift, minimum match threshold, excluded windows and minimum meeting duration. The system converts all blocks to minutes since midnight, handles midnight crossings by automatically splitting blocks, filters anything outside the configured range and analyzes availability by time intervals, classifying results by match level (100%, ≥ configured threshold, lower match). I also implemented a tolerant OCR module that normalizes detected text, supports multiple date and time formats, merges ranges split across lines, associates times to dates by context and flags incidents when something falls outside the configured range. The result is an intelligent planner that turns complex schedules into clear, actionable decisions.",
+        features: [
+          "Groups identified by 6-character codes",
+          "Configurable planning window per group",
+          "Management of WORK, UNAVAILABLE and PREFERRED blocks (maximum 3 per user)",
+          "Automatic buffer before each shift (e.g. 20 minutes) configurable by the host",
+          "Automatic splitting of blocks that cross midnight",
+          "Configurable excluded time windows (e.g. 00:00–07:59)",
+          "Configurable minimum match threshold and slot classification (green / yellow / red)",
+          "Configurable minimum meeting duration",
+          "Automatic calculation of best slots based on the group's real availability",
+          "Schedule import via tolerant OCR that handles noisy input",
+          "Parser that normalizes text, merges split ranges and associates times to dates by context",
+          "Incident marking when blocks fall outside the configured range",
+          "Architecture with clear separation between UI, services and testable domain (Clean / DDD)",
         ],
       },
     },
