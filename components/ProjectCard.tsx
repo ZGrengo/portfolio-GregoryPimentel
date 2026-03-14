@@ -25,6 +25,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       "ecommerce-php": "ecommercePhp",
       "flight-search": "hackaflight",
       "think-fast": "thinkFast",
+      quedaflow: "quedaflow",
     }
     const key = slugToKey[project.slug]
     return key ? t.projects.descriptions[key] : project.description
@@ -37,6 +38,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           src={project.image}
           alt={project.title}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
@@ -75,13 +77,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </CardContent>
 
-      <CardFooter className="flex flex-col sm:flex-row flex-wrap gap-2 mt-auto">
-        <div className="flex flex-wrap gap-2 w-full sm:w-auto">
+      <CardFooter className="flex flex-row flex-wrap gap-2 mt-auto items-stretch">
+        <div className="flex flex-wrap gap-2 flex-1 min-w-0">
           {project.liveUrl ? (
             <Button
               variant="outline"
               size="sm"
-              className="border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 bg-white/5 hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#00a676]/10 [.light_&]:hover:border-[#00a676] transition-colors"
+              className="border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 bg-white/5 hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#00a676]/10 [.light_&]:hover:border-[#00a676] transition-colors shrink-0"
               asChild
             >
               <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
@@ -95,7 +97,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <Button
               variant="outline"
               size="sm"
-              className="border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 bg-white/5 hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#00a676]/10 [.light_&]:hover:border-[#00a676] transition-colors"
+              className="border-white/20 dark:border-white/20 [.light_&]:border-[#00a676]/50 bg-white/5 hover:bg-white/10 dark:hover:bg-white/10 [.light_&]:hover:bg-[#00a676]/10 [.light_&]:hover:border-[#00a676] transition-colors shrink-0"
               asChild
             >
               <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
@@ -111,7 +113,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         <Button
           size="sm"
-          className="bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#00a676] [.light_&]:to-[#00a676]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#00a676]/90 [.light_&]:hover:to-[#00a676]/80 text-white w-full sm:w-auto sm:ml-auto justify-center"
+          className="bg-gradient-to-r from-palette-teal to-palette-blue dark:from-palette-teal dark:to-palette-blue [.light_&]:from-[#00a676] [.light_&]:to-[#00a676]/90 hover:from-palette-teal/90 hover:to-palette-blue/90 dark:hover:from-palette-teal/90 dark:hover:to-palette-blue/90 [.light_&]:hover:from-[#00a676]/90 [.light_&]:hover:to-[#00a676]/80 text-white shrink-0 w-full sm:w-auto sm:min-w-[140px] justify-center"
           asChild
         >
           <Link href={`/projects/${project.slug}`}>

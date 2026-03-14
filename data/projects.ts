@@ -255,14 +255,19 @@ export const projects: Project[] = [
     longDescription:
       "QuedaFlow es una aplicación web diseñada para equipos con horarios cambiantes (turnos rotativos, guardias, hostelería, retail, etc.) donde coordinar reuniones se vuelve un caos. Permite crear grupos por código, definir una ventana de planificación y añadir bloques de tiempo WORK, UNAVAILABLE o PREFERRED, ya sea manualmente o importando capturas de aplicaciones de horarios mediante OCR. A partir de esa información, el sistema convierte todos los bloques a minutos desde medianoche, respeta reglas configurables por el host (buffers antes de turnos, umbral mínimo de coincidencia, ventanas horarias bloqueadas, duración mínima de reunión) y calcula automáticamente los mejores huecos posibles. El resultado es un planner inteligente que traduce horarios complejos en decisiones claras, accionables y basadas en datos reales.",
     featured: true,
-    image: "/QuedaFlow/Desktop/Bloques de horarioDesktop.PNG",
+    image: "/QuedaFlow/Desktop/PortadaDesktop.PNG",
+    mobileImage: "/QuedaFlow/Mobile/HomeMobile.PNG",
     gallery: [
-      {
-        src: "/QuedaFlow/Desktop/Bloques de horarioDesktop.PNG",
-        alt: "QuedaFlow - Bloques de horario y planificación",
-        kind: "desktop",
-        featured: true,
-      },
+      { src: "/QuedaFlow/Desktop/PortadaDesktop.PNG", alt: "QuedaFlow - Portada", kind: "desktop", featured: true },
+      { src: "/QuedaFlow/Desktop/DashboardDesktop.PNG", alt: "QuedaFlow - Dashboard", kind: "desktop" },
+      { src: "/QuedaFlow/Desktop/GestionDeBloquesDesktop.PNG", alt: "QuedaFlow - Gestión de bloques", kind: "desktop" },
+      { src: "/QuedaFlow/Desktop/PlannerDesktop.PNG", alt: "QuedaFlow - Planner", kind: "desktop" },
+      { src: "/QuedaFlow/Desktop/OcrDesktop.PNG", alt: "QuedaFlow - OCR", kind: "desktop" },
+      { src: "/QuedaFlow/Desktop/ConfiguracionGrupoDesktop.PNG", alt: "QuedaFlow - Configuración de grupo", kind: "desktop" },
+      { src: "/QuedaFlow/Mobile/HomeMobile.PNG", alt: "QuedaFlow - Portada móvil", kind: "mobile", featured: true },
+      { src: "/QuedaFlow/Mobile/DashboardMobile.PNG", alt: "QuedaFlow - Dashboard móvil", kind: "mobile" },
+      { src: "/QuedaFlow/Mobile/PlannerMobile.PNG", alt: "QuedaFlow - Planner móvil", kind: "mobile" },
+      { src: "/QuedaFlow/Mobile/OcrMobile.PNG", alt: "QuedaFlow - OCR móvil", kind: "mobile" },
     ],
     tech: [
       "Angular 17",

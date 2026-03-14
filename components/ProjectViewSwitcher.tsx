@@ -25,6 +25,7 @@ export function ProjectViewSwitcher({ desktopImage, mobileImage, projectTitle }:
               src={desktopImage}
               alt={projectTitle}
               fill
+              sizes="(max-width: 768px) 100vw, 896px"
               className="object-cover"
             />
           </div>
@@ -72,6 +73,7 @@ export function ProjectViewSwitcher({ desktopImage, mobileImage, projectTitle }:
             src={view === "desktop" ? desktopImage : mobileImage}
             alt={`${projectTitle} - ${view} view`}
             fill
+            sizes="(max-width: 768px) 100vw, 896px"
             className="object-cover transition-opacity duration-300"
           />
         </div>

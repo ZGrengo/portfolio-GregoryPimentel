@@ -55,7 +55,7 @@ export const translations = {
       viewProject: "Ver Proyecto",
       demo: "Demo",
       code: "Ver Código",
-      featuredProject: "Proyecto Destacado",
+      featuredProject: "Proyectos destacados",
       otherProjects: "Otros Proyectos",
       descriptions: {
         goikounter: "Optimización de comandas en cocina desarrollada desde operación real.\n\nEn producción en 10+ restaurantes, con impacto directo en velocidad y eficiencia. Con visión para escalar a toda la compañía.",
@@ -359,7 +359,7 @@ export const translations = {
       viewProject: "View Project",
       demo: "Demo",
       code: "View Code",
-      featuredProject: "Featured Project",
+      featuredProject: "Featured Projects",
       otherProjects: "Other Projects",
       descriptions: {
         goikounter: "Kitchen order optimization developed from real operations. In production in 10+ restaurants, with direct impact on speed and efficiency. With vision to scale to the entire company.",
